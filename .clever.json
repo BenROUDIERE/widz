@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_4e1b58fc-d28b-413e-8ee9-98c3f2b852b6",
+      "org_id": "user_dcbe3d7d-718e-457e-93cc-4a1372f93745",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_4e1b58fc-d28b-413e-8ee9-98c3f2b852b6.git",
+      "name": "widz",
+      "alias": "widz"
+    }
+  ]
+}
