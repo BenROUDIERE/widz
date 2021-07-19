@@ -7,8 +7,12 @@ class Balcony < ApplicationRecord
 
   RAIN_EXPOSED = ['casi-sec', "pas trop mal arrosé",'arrosé comme jamais']
   WATER_NEED = ['rien du tout', 'un peu','beaucoup' ]
-  CATEGORIES = ['comestible', 'vivace', 'fruits', 'arbuste']
-  validates :categories, presence: true, inclusion: { in: CATEGORIES }
-  validates :luminosity, presence: true, inclusion: { in: Plant::LUMINOSITIES }
+  #CATEGORIES = ['comestible', 'vivace', 'fruits', 'arbuste']
+
+  #attribute :luminosity, :string, :default: "ensoleillé"
+  attribute :size, :integer, default: 100
+
+  #validates :categories, presence: true, inclusion: { in: Plant::CATEGORIES }
+  #validates :luminosity, presence: true, inclusion: { in: Plant::LUMINOSITIES }
   validates :city, :water_need, :rain_exposed, :size, :number_of_plants_desired, :categories, presence: true
 end
