@@ -29,7 +29,6 @@ before_action :set_balcony, only: [:show]
   private
 
   def set_balcony
-    @plant = Plant.find(params[:id])
     @balcony = Balcony.find(params[:id])
   end
 
