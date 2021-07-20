@@ -10,10 +10,73 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_153323) do
+ActiveRecord::Schema.define(version: 2021_07_20_140422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "balconies", force: :cascade do |t|
+    t.string "title"
+    t.string "luminosity"
+    t.string "city"
+    t.string "size"
+    t.string "rain_exposed"
+    t.integer "number_of_plants_desired"
+    t.string "water_need"
+    t.string "categories", default: [], array: true
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_balconies_on_user_id"
+  end
+
+  create_table "balcony_plants", force: :cascade do |t|
+    t.boolean "planted", default: false
+    t.bigint "plant_id", null: false
+    t.bigint "balcony_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["balcony_id"], name: "index_balcony_plants_on_balcony_id"
+    t.index ["plant_id"], name: "index_balcony_plants_on_plant_id"
+  end
+
+  create_table "combative_plants", force: :cascade do |t|
+    t.bigint "plant1_id", null: false
+    t.bigint "plant2_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["plant1_id"], name: "index_combative_plants_on_plant1_id"
+    t.index ["plant2_id"], name: "index_combative_plants_on_plant2_id"
+  end
+
+  create_table "plants", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "category"
+    t.string "luminosity"
+    t.string "water_need"
+    t.integer "water_frequency_in_days"
+    t.string "plantation_months", default: [], array: true
+    t.string "harvest_months", default: [], array: true
+    t.integer "min_temp"
+    t.integer "max_temp"
+    t.integer "spacing_in_cm"
+    t.text "disease"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.boolean "completed", default: false
+    t.string "category"
+    t.text "message"
+    t.string "title"
+    t.date "due_date"
+    t.bigint "balcony_plant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["balcony_plant_id"], name: "index_tasks_on_balcony_plant_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +86,16 @@ ActiveRecord::Schema.define(version: 2021_07_19_153323) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "balconies", "users"
+  add_foreign_key "balcony_plants", "balconies"
+  add_foreign_key "balcony_plants", "plants"
+  add_foreign_key "combative_plants", "plants", column: "plant1_id"
+  add_foreign_key "combative_plants", "plants", column: "plant2_id"
+  add_foreign_key "tasks", "balcony_plants"
 end
