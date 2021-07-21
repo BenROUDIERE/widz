@@ -1,5 +1,5 @@
 class BalconiesController < ApplicationController
- before_action :set_balcony, only: [:show]
+before_action :set_balcony, only: [:show]
 
   def new
     @balcony = Balcony.new
@@ -8,6 +8,7 @@ class BalconiesController < ApplicationController
   def create
     @user = current_user
     @balcony = Balcony.new(balcony_params)
+    p balcony_params
     @balcony.user = @user
     if @balcony.save
       redirect_to root_path
@@ -28,6 +29,6 @@ class BalconiesController < ApplicationController
   end
 
   def balcony_params
-    params.require(:balcony).permit(:title, :luminosity, :city, :size, :rain_exposed, :number_of_plants_desired, :water_need, :categories)
+    params.require(:balcony).permit(:title, :luminosity, :city, :size, :rain_exposed, :number_of_plants_desired, :water_need, categories: [])
   end
 end 
