@@ -130,6 +130,40 @@ file = URI.open("https://www.veseys.com/media/catalog/product/cache/image/700x70
 plant.photo.attach(io: file, filename: "thym.jpg", content_type: "image/jpg")
 plant.save!
 
+plant = Plant.new(
+name: "Romarin",
+category: "comestible", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+description: "Le romarin est une plante à croissance lente de la famille des lamiacées. Le romarin (Salvia rosmarinus) devient finalement un très joli petit arbrisseau condimentaire à feuillage persistant, pourvu de belles fleurs bleu clair. Excellente plante mellifère attirant les abeilles et les papillons. En cuisine, c'est une herbe aromatique hors classe pour la cuisson et les grillades à la saveur et au parfum délicieux. Peut être récolté tout au long de l'année. Semer sous verre et quand les jeunes plants sont assez grands, les repiquer ou bien les mettre en pots. Germination et croissance lente !",
+luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
+water_need: "faible", #['peu', 'moyen ', 'important']
+water_frequency_in_days: 8,
+plantation_months: ["May", "June"],
+harvest_months:["June", "July", "August", "September"],
+min_temp: -10,
+max_temp: 45,
+spacing_in_cm: 40,
+)
+file = URI.open("https://www.aromatiquebio.fr/wp-content/uploads/2019/10/Romarin4.jpg")
+plant.photo.attach(io: file, filename: "romarin.jpg", content_type: "image/jpg")
+plant.save!
+
+plant = Plant.new(
+name: "Stevia",
+category: "comestible", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+description: "La Stevia est une plante à germination difficile et irrégulière, ne pas lui donner trop d'eau. Dès que les jeunes plants sont maniables, les repiquer dans des pots ou bacs. Les feuilles de la varieté Stevia (Stevia rebaudiana) n'ont presque pas de calories et sont utilisées comme édulcorant dans le thé, le café et divers plats (éventuellement mouliné). Parfait pour les diabétiques, cette plante aromatique est originaire d'Amérique du Sud, utilisée comme additif alimentaire avec un goût sucré et un arrière goût de réglisse. La stevia a un pouvoir sucrant 40 fois supérieur à celui du sucre blanc ordinaire. Stevia ne supporte pas les températures basses de la nuit, rentrer les plantes lorsque la température n'atteint pas plus de 10ºC.",
+luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
+water_need: "moyen", #['peu', 'moyen ', 'important']
+water_frequency_in_days: 5,
+plantation_months: ["March", "April", "May", "June", "July", "August", "September", "October"],
+harvest_months:["March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February"],
+min_temp: 10,
+max_temp: 45,
+spacing_in_cm: 20,
+)
+file = URI.open("https://www.alimentarium.org/fr/system/files/styles/full_wide/private/thumbnails/image/01_shutterstock_615455528_top.jpg")
+plant.photo.attach(io: file, filename: "stevia.jpg", content_type: "image/jpg")
+plant.save!
+
 ## Fruits
 
 plant = Plant.new(
@@ -181,6 +215,23 @@ spacing_in_cm: 40,
 )
 file = URI.open("https://www.remedes-de-grand-mere.com/wp-content/uploads/2018/10/Murier-noir-Morus-Nigra.jpg")
 plant.photo.attach(io: file, filename: "murier.jpg", content_type: "image/jpg")
+plant.save!
+
+plant = Plant.new(
+name: "Tomates cerises",
+category: "fruits", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+description: "La tomate cerise est l’un des fruits/légumes, les plus faciles à cultiver car elles poussent rapidement. Elle se cultive aussi bien en terre que en pot sur balcon ou terrasse et peut être récoltée tout au long de l’été.",
+luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
+water_need: "important", #['peu', 'moyen ', 'important']
+water_frequency_in_days: 2,
+plantation_months: ["March", "April", "May"],
+harvest_months:["june", "july", "september"],
+min_temp: 8,
+max_temp: 45,
+spacing_in_cm: 60,
+)
+file = URI.open("https://media.ooreka.fr/public/image/plant/266/mainImage-full-11530300.jpg")
+plant.photo.attach(io: file, filename: "tomate_cerise.jpg", content_type: "image/jpg")
 plant.save!
 
 ## Arbustes
