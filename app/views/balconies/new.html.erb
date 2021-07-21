@@ -1,2 +1,32 @@
 <h1>Balconies#new</h1>
 <p>Find me in app/views/balconies/new.html.erb</p>
+
+<div class="container-md">
+  <div class="row-new">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Crée ton Balcon</h3>
+        <!-- Slider main container -->
+          <%= simple_form_for @balcony do |f| %>
+            <div class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                  <div class="swiper-slide"><%= f.input :title, placeholder: 'Mon Balcowidz' %></div>
+                  <div class="swiper-slide"><%= f.input :city, id:"balcony_city", placeholder: 'Addresse ?' %></div>
+                  <div class="swiper-slide"><%= f.input :categories, prompt: 'Quel type de balcon tu préfères ?', collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], as: :check_boxes %></div>
+                  <div class="swiper-slide"><%= f.input :water_need, as: :radio_buttons, class:'form-check-inline', prompt: 'Tu es plutôt style de vie?', collection: ['Aventurier', 'Casanier'] %></div>
+                  <div class="swiper-slide"><%= f.input :rain_exposed, as: :radio_buttons, wrapper_html: {class: 'inline'}, collection: ['un peu', 'moyen', 'beaucoup'] %></div>
+                  <div class="swiper-slide"><%= f.input :number_of_plants_desired, placeholder: 'Tu souhaiterais combien de plantes max ?' %></div>
+                  <div class="swiper-slide"><%= f.submit 'Add Your Balcony', class: 'btn btn-success' %> </div>
+              </div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 plant = Plant.new(
 name: "Geranium",
-category: "Perennial", #['Comestible', 'Perennial', 'Fruits', 'Shrub']
+category: "Vivace", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "Le géranium s'acclimate parfaitement sous nos latitudes. Cette plante vivace résiste aux températures glaciales. Un sol limoneux au pH alcalin ou neutre sera idéal pour cette plante vivace. Cette plante vivace a besoin d'un apport moyen en eau et d'un sol sec ou drainé si vous souhaitez lui garantir un environnement parfait.",
 luminosity: "peu ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
