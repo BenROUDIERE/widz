@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  get 'balcony_plants/show'
-  get 'tasks/new'
-  get 'tasks/create'
-  get 'tasks/index'
-  get 'plants/index'
-  get 'plants/show'
-  get 'balconies/new'
-  get 'balconies/create'
-  get 'balconies/show'
   root to: 'pages#home'
 
   devise_for :users
