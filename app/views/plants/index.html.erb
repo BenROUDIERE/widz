@@ -1,27 +1,38 @@
-<h1>Plants#index</h1>
-<p>Find me in app/views/plants/index.html.erb</p>
-
 <h1 id="index-title">Dico des plantes</h1>
+<div class="search">
+  <%= form_tag plants_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "searchTerm",
+      placeholder: "Nom de plante ou catégorie"
+    %>
+    <button type="submit" class="searchButton">
+    <i <%= submit_tag "Search", class: "fa fa-search" %></i>
+    </button>
+  <% end %>
+</div>
 
 <div class="cards-container">
   <div class="cards">
     <% @plants.each do |plant| %>
-      <div class="card">
-          <div class="plant-card-image">
-            <%= cl_image_tag(plant.photo.key) %>
-          </div>
-          <div class="plant-card-content">
-            <div class="plant-card-title">
-              <h4><%= plant.name %></h4>
+      <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-md-8">
+                <div class="card-body">
+                    <p class="card-subtitle"><%= plant.category %></p>
+                    
+                    <h5 class="card-title"><%= plant.name %></h5>
+                    <p class="card-text"><%= plant.description %></p>
+                    <i class="material-icons mr-2">Arroser tous les <%= plant.water_frequency_in_days %> jours</i>
+                    <%= link_to 'Details', plant_path(plant), class:"btn btn-warning" %>
+                </div>
             </div>
-            <p><%= plant.description %></p>
-            <div class="flex">
-              <i class="material-icons mr-2">Arroser tous les <%= plant.water_frequency_in_days %> jours</i>
+            <div class="plant-img col-md-4">
+                <%= cl_image_tag(plant.photo.key) %>
+                <i class="fas fa-seedling"></i>
             </div>
-          </div>
-          <div class="plant-card-actions">
-            <%= link_to 'Details', plant_path(plant) %>
-          </div>
+        </div>
       </div>
     <% end %>
   </div>
+</div>

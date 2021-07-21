@@ -1,12 +1,13 @@
 <h1>Balconies#new</h1>
 <p>Find me in app/views/balconies/new.html.erb</p>
 
-<div class="container-md">
-  <div class="row-new">
-    <div class="col-12 col-md-6 offset-lg-3">
+<div class="container">
+  <div class="row">
+    <div class="col-12 ">
       <div class="bg-white rounded p-3 shadow">
         <h3>Crée ton Balcon</h3>
         <!-- Slider main container -->
+          
           <%= simple_form_for @balcony do |f| %>
             <div class="swiper-container">
               <!-- Additional required wrapper -->
@@ -23,7 +24,6 @@
               <!-- If we need navigation buttons -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
-              <div class="swiper-pagination"></div>
             </div>
           <% end %>
       </div>

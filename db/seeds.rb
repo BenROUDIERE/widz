@@ -11,7 +11,7 @@
 
 plant = Plant.new(
 name: "Geranium",
-category: "Vivace", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "vivace", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "Tout convient à cette plante vivace : en adoptant le géranium vivace ibericum, vous ne risquez pas d'impair sur l’exposition idéale. Sa floraison débute en avril et finit en juillet. Grâce à cette plante vivace, vous pourrez contempler de belles fleurs de couleur bleue. C'est une plante vivace qui a pour particularité de perdre ses feuilles en hiver, le feuillage de Geranium ibericum est dit caduc.",
 luminosity: "peu ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
@@ -28,7 +28,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Agapanthe Blanc",
-category: "Vivace", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "vivace", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "L’agapanthe est une merveilleuse plante vivace qui fleurit en été, offrant ainsi de majestueuses hampes florales. L’agapanthe est une plante qui ne résiste pas aux fortes gelées et doit donc être cultivée dans les zones où l’hiver reste relativement doux. Si l’hiver est doux n’y touchez pas et laissez le feuillage en place durant l’hiver.",
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
@@ -45,7 +45,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Rose trèmière naine",
-category: "Vivace", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "vivace", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "la rose trémière naine est une plante qui mesure de 60 à 70 centimètres de hauteur et qui fleurit de fin mai jusqu’aux gelées. Ses tiges sont rigides et vous donneront de belles fleurs en forme de gros pompons doubles de 8 à 10 cm de diamètre. De taille réduite, elles ne nécessitent pas de tuteur et résistent au vent. L’entretien d’une rose trémière naine est extrêmement simple. Il vous suffit de couper à la base les tiges florales fanées et éventuellement de prévoir quelques arrosages par temps sec ainsi qu'un apport d’engrais complet en début de saison.",
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
@@ -134,7 +134,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Mini-pommier Gala",
-category: "Fruits", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "fruits", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "Le Mini-pommier Gala, est un arbre fruitier qui apporte un ornement original et attractif aux balcons et aux terrasses. Les couleurs des pommes sont d’un magnifique rouge orangé flamboyant avec un soupçon de jaune. Il conserve une taille réduite tout en donnant des fruits de taille normale durant le mois de septembre. Sa floraison, quant à elle, se fait au cours du mois d’avril. Il pousse surtout en Europe et s’adapte mal aux régions très chaudes. Il a besoin d’être partiellement exposé au soleil ou dans un endroit complètement ensoleillé pour atteindre une taille adulte d’environ de 1,5 mètre. Il a régulièrement besoin d’eau, de sa floraison à sa production des pommes.",
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
@@ -151,7 +151,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Mini-Ceriser",
-category: "Fruits", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "fruits", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "De par sa dimension réduite, le mini-cerisier Spur ‘Van’ (Prunus cerasus van), un cerisier nain, embellit merveilleusement un balcon ou un petit verger. La douceur et la fraîcheur de ses cerises charnues, croquantes et aussi grosses que celles d'un cerisier de taille normale égayeront les papilles des gourmands ! Le Prunus cerasus van requiert peu de soins. Il a besoin d'un sol humide, non argileux et neutre ou très légèrement calcaire. Il peut être planté en sol, dans un trou de 70 centimètres dans tous les sens ou en pot.",
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
@@ -168,7 +168,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Mûrier Cascade",
-category: "Fruits", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "fruits", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "Variété remarquable pour son port compact et retombant et surtout pour ses fruits savoureux (jusqu'à 370 g par pied). Plantez-la en suspension ou dans un grand pot pour déguster vos propres mûres chaque été sur la terrasse ou le balcon. Apprécie un sol riche en terreau et des arrosages réguliers en saison mais se montre par ailleurs très facile à cultiver.",
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
@@ -187,7 +187,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Azalée du Japon",
-category: "Arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "L'AZALEA japonica ou AZALEE DU JAPON rouge est un arbuste persistant, d'une hauteur adulte de 1 m, à la floraison rouge en avril-mai. Végétation basse et étalée. Il lui faut un sol léger, frais et acide, non calcaire sous exposition mi-ombre. Une situation au Nord lui convient bien. L'AZALEA japonica rouge est à planter en association avec d'autres plantes de terre de bruyère.",
 luminosity: "ombre", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
@@ -204,7 +204,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Pin Marie",
-category: "Arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "Le pin nain Marie Bregeon est un petit conifère à croissance basse et au port sphérique. Il pousse en prenant une jolie forme plus ronde et plus pleine que les autres cultivars de pins. Ses aiguilles sont vert clair et mesurent de 3 à 6 cm de long. De croissance lente, il est adapté à la plantation en conteneur et conserve sa forme sphérique sans être taillé. De forme régulière, le pin nain Marie Bregeon se présente comme un vrai petit bonsaï. D’entretien facile (pour ne pas dire négligeable), il pousse de 5 à 9 cm par an. ",
 luminosity: "ombre", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "peu", #['peu', 'moyen ', 'important']
@@ -221,7 +221,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Hibiscus de jardin",
-category: "Arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "Ces arbustes sur tige sont peu encombrants (d'une hauteur de 1,50 m à 1,80 m). Au sommet de la tige, le feuillage forme une véritable boule de 50 centimètres de diamètre environ, ponctué par ses jolies fleurs. Faciles à vivre grâce à un entretien simple, les hibiscus sur tige sont très rustiques : ils résistent au froid et au gel et peuvent résister sans difficulté à des températures négatives jusqu’à -15°C. Il ne sera donc pas nécessaire de les protéger en hiver pour affronter le froid. Comme la majorité des hibiscus, ils apprécient une exposition ensoleillée pour bien fleurir. Une culture à la mi-ombre est possible, mais la floraison sera moins présente.",
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "peu", #['peu', 'moyen ', 'important']
@@ -239,7 +239,7 @@ plant.save!
 
 plant = Plant.new(
 name: "Glycine blanche",
-category: "Arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
+category: "arbuste", #['Comestible', 'Vivace', 'Fruits', 'Arbuste']
 description: "Ces arbustes sur tige sont peu encombrants (d'une hauteur de 1,50 m à 1,80 m). Forme très originale pour cette glycine qui vous offrira, chaque printemps, un superbe spectacle. Retombantes, ses nombreuses grappes de fleurs blanches et parfumées formeront une véritable cascade d'une grande élégance. Culture facile dans tout bon sol ou en pot. Prévoir un tuteur.",
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
