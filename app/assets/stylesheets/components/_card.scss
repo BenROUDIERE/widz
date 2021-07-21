@@ -1,0 +1,168 @@
+.cards {
+  display: grid;
+  place-content: center;
+  
+  h1 {
+    text-align: center;
+  }
+}
+
+
+/* CARD 1 */
+.card-plant {
+  height: auto;
+}
+
+.aromatique {
+  border: 1px solid orange !important;
+}
+
+.card-plant {
+  .card-body {
+    height: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .card-text {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .card-subtitle {
+    text-transform: uppercase;
+    color: orange;
+    font-size: 10px;
+  }
+  
+  .plant-img {
+    .fas {
+      color: orange;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      padding: .75rem;
+    }
+
+    img{
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      padding:  1rem;
+      position: relative;
+    }
+  }
+}
+
+
+/* CARD 2 */
+.card-plant-min {
+  height: auto;
+  width: 200px !important;
+}
+
+.card-plant-min .card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-plant-min .card-body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-plant-min .fas {
+  font-size: x-large;
+}
+
+.card-plant-min .fa-thermometer-three-quarters {
+  color: green;
+}
+
+.card-plant-min .fa-sun {
+  color: orange;
+}
+
+.card-plant-min .fa-tint {
+  color: blue;
+}
+
+.card-plant-min .plant-img {
+  position: relative;
+}
+
+.card-plant-min .plant-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+  color: white;
+}
+
+/* CARD 3 */
+.card-params {
+  width: 200px !important;
+  display: grid !important;
+  place-content: center;
+}
+
+.card-params .fas {
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+  color: white;
+  background: orange;
+  border-radius: 50%;
+  width: 5rem;
+  height:5rem;
+  margin-top: 2.5rem;
+}
+
+.card-params h5 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* CARD 4 */
+.card-notif {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  background: orange !important;
+  justify-content: space-between;
+  border: none !important;
+}
+
+.card-notif .card-info {
+  display: flex;
+  align-items: center;
+}
+
+.card-notif .fas {
+  display: grid;
+  place-content: center;
+  font-size: 2rem;
+  background: orange;
+  color: white;
+  border-radius: 50%;
+  width: 4rem;
+  height:4rem;
+  margin: .5rem;
+}
+
+.card-notif .fa-check-circle {
+  font-size: 3rem;
+}
+
+.card-notif .card-info h5 {
+  margin: 0;
+  margin-left: 1rem;
+  color: white;
+}
