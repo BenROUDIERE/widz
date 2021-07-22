@@ -12,7 +12,7 @@
     }
 
     #home_title {
-        color:rgb(255, 255, 255);
+        color: white;
         text-align: center;
         margin-bottom: 5rem;
         margin-top: 10rem;
@@ -20,7 +20,7 @@
             font-size: 6rem;
             font-weight: bolder;
             margin-bottom: 7rem;
-            color:rgb(255, 255, 255);
+            color: white;
         }
         h2 {
           margin-bottom: 2rem;
@@ -59,12 +59,14 @@
           left: 0;
           width: 0%;
           height: 100%;
+
+          background-color: $yellow-50;
           transition: all .3s;
           border-radius: 10rem;
           z-index: -1;
         }
         &:hover {
-          color: #fff;
+          color: white;
           &:before {
             width: 100%;
           }
