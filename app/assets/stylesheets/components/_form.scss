@@ -1,0 +1,155 @@
+#form-balcon {
+  .form-control {
+    display: flex;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.75rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $yellow;
+    background-color: $beige;
+    background-clip: padding-box;
+    border: 1px solid $yellow;
+    border-radius: 2px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  i {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: $yellow;
+  }
+
+  .title {
+    padding: 10px;
+    margin-bottom: 30px;
+    color: $blue;
+  }
+
+  .border-orange {
+    border: 1px solid $yellow;
+  }
+
+  .tag-item {
+    display: flex;
+    direction: column;
+    justify-content: center;
+  }
+  
+  .tag-selector {
+    position: absolute;
+    transform: scale(0);
+  }
+  
+  .tag-selector + label {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.7rem;
+    border-radius: 50rem;
+    padding: 0.1rem 0.5rem;
+    background-color: $beige;
+    color: $yellow;
+    border: 1px solid $yellow;
+  }
+  
+  .tag-selector:checked + label {
+    background-color: $yellow;
+    color: white;
+  }
+
+  .form-check-label {
+    width: 100px;
+  }
+
+  .category-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  .category-item {
+    flex: 0 0 30%;
+  }
+  
+  .category-selector {
+    position: absolute;
+    transform: scale(0);
+  }
+  
+  .category-selector + label {
+    display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100px;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 5px 10px 10px;
+    border: 1px solid #EAEAEA;
+    border-radius: 4px;
+    background-color: white;
+  }
+  
+  .category-selector:checked + label {
+    color: white !important;
+  }
+  
+  
+  #balcony_water_need_un_peu + label {
+    color: $blue-70;
+  }
+  
+  #balcony_water_need_un_peu:checked + label {
+    background-color: $blue-70;
+    border-color: $blue-70;
+  }
+  
+  
+  #balcony_water_need_beaucoup + label {
+    color: $blue;
+  }
+  
+  #balcony_water_need_beaucoup:checked + label {
+    background-color: $blue;
+    border-color: $blue;
+  }
+  
+  
+  #balcony_water_need_rien_du_tout + label {
+    color: $blue-50;
+  }
+  
+  #balcony_water_need_rien_du_tout:checked + label {
+    background-color: $blue-50;
+    border-color: $blue-50;
+  }
+
+  #balcony_rain_exposed_casi-sec + label {
+    color: $blue-50;
+  }
+  
+  #balcony_rain_exposed_casi-sec:checked + label {
+    background-color: $blue-50;
+    border-color: $blue-50;
+  }
+  
+  
+  #balcony_rain_exposed_pas_trop_mal_arrosé + label {
+    color: $blue-70;
+  }
+  
+  #balcony_rain_exposed_pas_trop_mal_arrosé:checked + label {
+    background-color: $blue-70;
+    border-color: $blue-70;
+  }
+  
+  
+  #balcony_rain_exposed_arrosé_comme_jamais + label {
+    color: $blue;
+  }
+  
+  #balcony_rain_exposed_arrosé_comme_jamais:checked + label {
+    background-color: $blue;
+    border-color: $blue;
+  }
+}
