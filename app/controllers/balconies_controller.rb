@@ -2,6 +2,8 @@ class BalconiesController < ApplicationController
 before_action :set_balcony, only: [:show]
 
   def new
+    return redirect_to current_user.balcony if current_user.balcony
+    
     @balcony = Balcony.new
   end
 
