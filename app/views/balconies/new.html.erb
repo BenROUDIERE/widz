@@ -1,32 +1,73 @@
-<h1>Balconies#new</h1>
-<p>Find me in app/views/balconies/new.html.erb</p>
-
-<div class="container">
+<div class="container" id="form-balcon">
+  <div class="title">
+    <h3>Ton futur Balcon</h3>
+    <br>
+    <h6>Pour composer ton balcon, il nous faut quelques informations...</h6>
+  </div>
   <div class="row">
     <div class="col-12 ">
-      <div class="bg-white rounded p-3 shadow">
-        <h3>Crée ton Balcon</h3>
-        <!-- Slider main container -->
+      <div class="bg-white rounded p-3 shadow border-orange">
           
           <%= simple_form_for @balcony do |f| %>
             <div class="swiper-container">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                  <div class="swiper-slide"><%= f.input :title, placeholder: 'Mon Balcowidz' %></div>
-                  <div class="swiper-slide"><%= f.input :city, id:"balcony_city", placeholder: 'Addresse ?' %></div>
-                  <div class="swiper-slide"><%= f.input :categories, prompt: 'Quel type de balcon tu préfères ?', collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], as: :check_boxes %></div>
-                  <div class="swiper-slide"><%= f.input :water_need, as: :radio_buttons, class:'form-check-inline', prompt: 'Tu es plutôt style de vie?', collection: ['Aventurier', 'Casanier'] %></div>
-                  <div class="swiper-slide"><%= f.input :rain_exposed, as: :radio_buttons, wrapper_html: {class: 'inline'}, collection: ['un peu', 'moyen', 'beaucoup'] %></div>
-                  <div class="swiper-slide"><%= f.input :number_of_plants_desired, placeholder: 'Tu souhaiterais combien de plantes max ?' %></div>
-                  <div class="swiper-slide"><%= f.submit 'Add Your Balcony', class: 'btn btn-success' %> </div>
+                <div class="swiper-slide">
+                  <div class="center"> 
+                    <i class="fas fa-pen"></i><%= f.input :title, :label => 'Comment veux-tu appeler ton balcon ?', placeholder: 'Mon Balcowidz' %>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="center"> 
+                    <i class="far fa-building"></i><%= f.input :city, :label => 'Où est-ce que tu vis ?', id:"balcony_city", placeholder: 'Moncuq est accepté...' %>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="center"> 
+                    <i class="fab fa-pagelines"></i><%= f.input :categories, :label => 'Tu veux quel type de plantes sur ton balcon ? (tu peux en choisir plusieurs)', prompt: 'Plantes comestibles, vivaces etc.', collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], as: :check_boxes, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="center"> 
+                    <i class="fas fa-faucet"></i><%= f.input :water_need, :label => "Niveau entretien on peut t'en demander :", 
+                        as: :radio_buttons, 
+                        class:'form-check-inline', 
+                        prompt: 'Sois le plus réaliste possible !', 
+                        collection_wrapper_tag: 'div',
+                        collection_wrapper_class: 'category-wrapper',
+                        item_wrapper_class: 'category-item',
+                        input_html: {class: 'category-selector'},
+                        collection: Balcony::WATER_NEED %>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="center"> 
+                    <i class="fas fa-cloud-rain"></i><%= f.input :rain_exposed, :label => "Quand il pleut, ton balcon est :", as: :radio_buttons, wrapper_html: {class: 'inline'},
+                      as: :radio_buttons, 
+                      class:'form-check-inline', 
+                      prompt: 'Sois le plus réaliste possible !', 
+                      collection_wrapper_tag: 'div',
+                      collection_wrapper_class: 'category-wrapper',
+                      item_wrapper_class: 'category-item',
+                      input_html: {class: 'category-selector'},
+                      collection: Balcony::RAIN_EXPOSED %>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="center"> 
+                    <i class="fas fa-list-ol"></i> <%= f.input :number_of_plants_desired, :label => "Tu souhaiterais combien de plantes max ?", placeholder: '1 est un minimum et 30 un maximum' %>
+                    <%= f.submit 'Valides ton Balcon', class: 'btn btn-success mt-5' %>
+                  </div>
+                </div>
               </div>
               <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
             </div>
           <% end %>
       </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
     </div>
   </div>
 </div>
