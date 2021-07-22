@@ -1,9 +1,15 @@
 <div id="home_container">
-	<div class="home_wrapper">
-		<div id="home_title">
-			<h1>Weedz</h1>
-			<h2>Never kill a plant again</h2>
-		</div>
-		<a href="#" id="home_button">Commencer</a>
-	</div>
+  <div class="home_wrapper">
+    <div id="home_title">
+      <h1>Weedz</h1>
+      <h2>Never kill a plant again</h2>
+    </div>
+    <% if user_signed_in? %>
+      <%= link_to 'Commencer', new_balcony_path, class: "home_button begin-btn" %>
+    <% else%>
+      <%= link_to 'Sign up', new_user_registration_path, class: "home_button signup-btn" %>
+      <%= link_to 'Login', new_user_session_path, class: "home_button login-btn mt-2" %>
+
+    <% end %>
+  </div>
 </div>

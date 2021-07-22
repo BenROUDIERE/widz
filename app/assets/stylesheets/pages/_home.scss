@@ -27,8 +27,8 @@
           font-size: 1.5rem;
         }
     }
-       
-    #home_button {
+
+    .home_button {
         box-shadow: $box-shadow;
         display: inline-block;
         padding: .75rem 1.25rem;
@@ -49,7 +49,6 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: $yellow;
           border-radius: 10rem;
           z-index: -2;
         }
@@ -60,7 +59,6 @@
           left: 0;
           width: 0%;
           height: 100%;
-          background-color: darken(orange, 15%);
           transition: all .3s;
           border-radius: 10rem;
           z-index: -1;
@@ -71,5 +69,24 @@
             width: 100%;
           }
         }
+    }
+    .begin-btn {
+      background-color: $yellow;
+      &:before {
+        background-color: darken(orange, 15%);  
+      }
+    }
+    .signup-btn {
+      background-color: brown;
+      &:before {
+        background-color: darken(brown, 15%);  
+      }
+    }
+    .login-btn {
+      background-color: beige;
+      color: brown;
+      &:before {
+        background-color: darken(beige, 15%);  
+      }
     }
 }
