@@ -160,7 +160,7 @@ min_temp: 10,
 max_temp: 45,
 spacing_in_cm: 20,
 )
-file = URI.open("https://www.alimentarium.org/fr/system/files/styles/full_wide/private/thumbnails/image/01_shutterstock_615455528_top.jpg")
+file = URI.open("https://cdn1.fermedesaintemarthe.com/I-Autre-5650_1200x1200-stevia-rebaudiana-ab.net.jpg")
 plant.photo.attach(io: file, filename: "stevia.jpg", content_type: "image/jpg")
 plant.save!
 
