@@ -14,16 +14,20 @@
 }
 
 .aromatique {
-  border: 1px solid orange !important;
+  border: 1px solid $yellow !important;
 }
 
 .card-plant {
+  .card-desc {
+    padding-right: 0;
+  }
   .card-body {
     height: 100%;
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    padding-right: 0;
 
     .card-text {
       display: -webkit-box;
@@ -35,27 +39,33 @@
 
   .card-subtitle {
     text-transform: uppercase;
-    color: orange;
+    color: $yellow;
     font-size: 10px;
   }
   
   .plant-img {
+    position: unset;
     .fas {
-      color: orange;
+      color: $yellow;
       background: white;
       border-radius: 50%;
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
       padding: .75rem;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-content: center;
     }
 
     img{
-      height: 200px;
+      height: 100%;
       width: 100%;
       object-fit: cover;
       padding:  1rem;
       position: relative;
+      padding-left: 0;
     }
   }
 }
@@ -87,7 +97,7 @@
 }
 
 .card-plant-min .fa-sun {
-  color: orange;
+  color: $yellow;
 }
 
 .card-plant-min .fa-tint {
@@ -118,7 +128,7 @@
   place-content: center;
   font-size: 2rem;
   color: white;
-  background: orange;
+  background: $yellow;
   border-radius: 50%;
   width: 5rem;
   height:5rem;
@@ -135,7 +145,7 @@
   display: flex !important;
   flex-direction: row !important;
   align-items: center;
-  background: orange !important;
+  background: $yellow !important;
   justify-content: space-between;
   border: none !important;
 }
@@ -149,7 +159,7 @@
   display: grid;
   place-content: center;
   font-size: 2rem;
-  background: orange;
+  background: $yellow;
   color: white;
   border-radius: 50%;
   width: 4rem;
@@ -165,4 +175,29 @@
   margin: 0;
   margin-left: 1rem;
   color: white;
+}
+
+.add-plant {
+  font-size: 12px;
+  font-style: italic;
+  color: $blue-10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .5rem;
+
+  p {
+    margin: 0;
+  }
+
+  .fas {
+    background: $blue-50;
+    color: white;
+    border-radius: 50%;
+    padding: .75rem;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-content: center;
+  }
 }

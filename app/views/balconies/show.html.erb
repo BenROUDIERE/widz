@@ -1,58 +1,12 @@
-<div class="container" id="form-balcon">
+<div class="container">
   <div class="title">
-    <h3>Ton futur Balcon</h3>
-    <br>
-    <h6>Pour composer ton balcon, il nous faut quelques informations...</h6>
+    <h3><%= @balcony.title %></h3>
   </div>
-  <div class="search">
-    <%= form_tag plants_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "searchTerm",
-        placeholder: "Nom de plante ou catégorie"
-      %>
-      <button type="submit" class="searchButton">
-      <i <%= submit_tag "Search", class: "fa fa-search" %></i>
-      </button>
-    <% end %>
-  </div>
-  
-    <div class="cards-container">
-      <div class="cards">
-      <% if @plant.present? %>
-        <% @plants.each do |plant| %>
-          <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <p class="card-subtitle"><%= plant.category %></p>
-                        
-                        <h5 class="card-title"><%= plant.name %></h5>
-                        <p class="card-text"><%= plant.description %></p>
-                        <i class="material-icons mr-2">Arroser tous les <%= plant.water_frequency_in_days %> jours</i>
-                        <%= link_to 'Details', plant_path(plant), class:"btn btn-warning" %>
-                    </div>
-                </div>
-                <div class="plant-img col-md-4">
-                    <%= cl_image_tag(plant.photo.key) %>
-                    <i class="fas fa-seedling"></i>
-                </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    </div>
-    <% else %>
-    <div class="card aromatique card-plant-min mb-3" style="width: 18rem;">
-        <div class="plant-img">
-            <%= cl_image_tag(plant.photo.key) %>
-            <h5 class="plant-title card-title"><%= plant.name %></h5>
-        </div>
-        <div class="card-body">
-            <i class="fas fa-thermometer-three-quarters"></i>
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-tint"></i>
-        </div>
-    </div>
+
+  <% if @plants.present? %>
+    
+    <%= render "balcony_plants" %>
+  <% else %>
+    <%= render "suggested_plants" %>
   <% end %>
 </div>
