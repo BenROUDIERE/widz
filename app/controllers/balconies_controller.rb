@@ -2,13 +2,14 @@ class BalconiesController < ApplicationController
 before_action :set_balcony, only: [:show]
 
   def new
+    return redirect_to current_user.balcony if current_user.balcony
+    
     @balcony = Balcony.new
   end
 
   def create
     @user = current_user
     @balcony = Balcony.new(balcony_params)
-    p balcony_params
     @balcony.user = @user
     if @balcony.save
       redirect_to root_path
@@ -19,12 +20,16 @@ before_action :set_balcony, only: [:show]
 
   def show 
     @balcony = Balcony.find(params[:id])
+    
+    @balcony_plants   = current_user.balcony_plants
+    @suggested_plants = Plant.all
   end
 
 
   private
 
   def set_balcony
+    @plant = Plant.find(params[:id])
     @balcony = Balcony.find(params[:id])
   end
 

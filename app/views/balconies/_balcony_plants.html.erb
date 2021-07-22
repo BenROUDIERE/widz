@@ -1,0 +1,19 @@
+<div class="title">
+  <h5>Toutes les plantes de mon <%= @balcony.title %></h5>
+</div>
+<div class="remarks">
+  <p>Remarques sur vos plantes</p>
+</div>
+<% @balcony_plants.each do |balcony_plant| %>
+  <div class="card aromatique card-plant-min mb-3" style="width: 18rem;">
+    <div class="plant-img">
+      <%= cl_image_tag(plant.photo.key) %>
+      <h5 class="plant-title card-title"><%= balcony_plant.plant.name %></h5>
+    </div>
+    <div class="card-body">
+      <i class="fas fa-thermometer-three-quarters"></i>
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-tint"></i>
+    </div>
+  </div>
+<% end %>
