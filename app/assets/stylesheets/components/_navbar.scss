@@ -1,12 +1,32 @@
-.navbar-lewagon {
+.navbar-custom {
   justify-content: space-between;
   background: white;
+  box-shadow: $box-shadow;
+  
+  .nav-icon {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-link {
+    width: 5rem;
+    display: grid;
+    place-content: center;
+    height: 4rem;
+  }
+  
+  .fas{
+    font-size: 1.25rem;
+    color:$blue;
+  }
+
+  .active {
+    background: $blue;
+    
+    .fas {
+      color: $yellow;
+    }
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
