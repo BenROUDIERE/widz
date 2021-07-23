@@ -15,17 +15,27 @@
                 <!-- Slides -->
                 <div class="swiper-slide">
                   <div class="center"> 
-                    <i class="fas fa-pen"></i><%= f.input :title, :label => 'Comment veux-tu appeler ton balcon ?', placeholder: 'Mon Balcowidz' %>
+                    <i class="fas fa-pen"></i><%= f.input :title, :label => 'Comment veux-tu appeler ton balcon ?', 
+                    placeholder: 'Mon Balcowidz' %>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-                    <i class="far fa-building"></i><%= f.input :city, :label => 'Où est-ce que tu vis ?', id:"balcony_city", placeholder: 'Moncuq est accepté...' %>
+                    <i class="far fa-building"></i><%= f.input :city, :label => 'Où est-ce que tu vis ?', 
+                    id:"balcony_city", 
+                    placeholder: 'Moncuq est accepté...' %>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-                    <i class="fab fa-pagelines"></i><%= f.input :categories, :label => 'Tu veux quel type de plantes sur ton balcon ? (tu peux en choisir plusieurs)', prompt: 'Plantes comestibles, vivaces etc.', collection: Plant::CATEGORIES, as: :check_boxes, input_html: { class: "tag-selector" }, item_wrapper_class: 'tag-item' %>
+
+
+                    <i class="fab fa-pagelines"></i><%= f.input :categories, :label => 'Tu veux quel type de plantes sur ton balcon ? (tu peux en choisir plusieurs)', 
+                    prompt: 'Plantes comestibles, vivaces etc.', 
+                    collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], 
+                    as: :check_boxes, input_html: { class: "tag-selector" }, 
+                    item_wrapper_class: 'tag-item' %>
+
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -43,7 +53,8 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-                    <i class="fas fa-cloud-rain"></i><%= f.input :rain_exposed, :label => "Quand il pleut, ton balcon est :", as: :radio_buttons, wrapper_html: {class: 'inline'},
+                    <i class="fas fa-cloud-rain"></i><%= f.input :rain_exposed, :label => "Quand il pleut, ton balcon est :", 
+                      as: :radio_buttons, wrapper_html: {class: 'inline'},
                       as: :radio_buttons, 
                       class:'form-check-inline', 
                       prompt: 'Sois le plus réaliste possible !', 
@@ -56,7 +67,8 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-                    <i class="fas fa-list-ol"></i> <%= f.input :number_of_plants_desired, :label => "Tu souhaiterais combien de plantes max ?", placeholder: '1 est un minimum et 30 un maximum' %>
+                    <i class="fas fa-list-ol"></i> <%= f.input :number_of_plants_desired, :label => "Tu souhaiterais combien de plantes max ?", 
+                    placeholder: '1 est un minimum et 30 un maximum' %>
                     <%= f.submit 'Valides ton Balcon', class: 'btn btn-success mt-5' %>
                   </div>
                 </div>

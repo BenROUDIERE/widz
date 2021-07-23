@@ -62,7 +62,20 @@
       display: grid;
       place-content: center;
     }
-
+    .fas:before {
+      content: "\f067";
+    }
+    .plant {
+      position: absolute;
+      transform: scale(0);
+    }
+    .plant+label i{
+      cursor: pointer;
+    }
+    .plant:checked+label i:before {
+      color: $green;
+      content: "\f00c";
+    }
     img{
       height: 100%;
       width: 100%;
@@ -76,9 +89,17 @@
 
 
 /* CARD 2 */
+.grid-plants {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-gap: 1rem;
+  place-items: center;
+}
+
 .card-plant-min {
   height: auto;
-  width: 200px !important;
+  width: 150px !important;
 }
 
 .card-plant-min .card-img-top {
