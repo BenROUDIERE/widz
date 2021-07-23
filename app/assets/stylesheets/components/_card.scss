@@ -36,7 +36,11 @@
       -webkit-box-orient: vertical;
     }
   }
-
+  .btn-warning {
+    background-color: $yellow;
+    border-color:$yellow;
+    color: white;
+  }
   .card-subtitle {
     text-transform: uppercase;
     color: $yellow;

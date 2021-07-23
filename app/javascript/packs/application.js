@@ -22,7 +22,6 @@ ActiveStorage.start()
 import "bootstrap";
 import { initAutocomplete} from '../plugins/init_autocomplete';
 import { initSwiper } from '../plugins/init_swiper';
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
