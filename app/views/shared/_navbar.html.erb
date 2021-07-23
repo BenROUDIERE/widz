@@ -1,7 +1,7 @@
 <div class=" navbar-custom fixed-bottom">
   <div class="nav-icon">
     <div class="nav-link nav-home">
-      <%= link_to balcony_path(balconies) do %>
+      <%= link_to balcony_path(current_user) do %>
         <%= content_tag :span, "", :class => "fas fa-carrot" %>
       <% end %>
     </div>
@@ -16,7 +16,7 @@
       <% end %>
     </div>
     <div class="nav-link nav-user">
-      <%= link_to balcony_plant_path(current_user) do %>
+      <%= link_to balcony_path(current_user) do %>
         <%= content_tag :span, "", :class => "fas fa-user" %>
       <% end %>
     </div>
