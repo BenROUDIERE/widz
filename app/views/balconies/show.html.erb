@@ -3,8 +3,7 @@
     <h3><%= @balcony.title %></h3>
   </div>
 
-  <% if @plants.present? %>
-    
+  <% if @balcony_plants.present? %>
     <%= render "balcony_plants" %>
   <% else %>
     <%= render "suggested_plants" %>
