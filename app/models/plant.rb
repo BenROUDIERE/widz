@@ -3,6 +3,7 @@ class Plant < ApplicationRecord
   has_one_attached :photo
   LUMINOSITIES = ['ombre', 'peu ensoleillé', 'ensoleillé']
   CATEGORIES = ['comestible', 'vivace', 'fruits', 'arbuste']
+  
   validates :luminosity, presence: true, inclusion: { in: LUMINOSITIES }
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   

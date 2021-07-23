@@ -28,11 +28,14 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
+
+
                     <i class="fab fa-pagelines"></i><%= f.input :categories, :label => 'Tu veux quel type de plantes sur ton balcon ? (tu peux en choisir plusieurs)', 
                     prompt: 'Plantes comestibles, vivaces etc.', 
                     collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], 
                     as: :check_boxes, input_html: { class: "tag-selector" }, 
                     item_wrapper_class: 'tag-item' %>
+
                   </div>
                 </div>
                 <div class="swiper-slide">
