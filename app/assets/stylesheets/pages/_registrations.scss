@@ -116,3 +116,43 @@
         display: inline-block;
     }
 }
+
+.forgot_container {
+    .signup-btn2 {
+    background-color: $yellow-50;
+    color: $blue;
+    padding: .75rem;
+    font-size: 10px;
+    width: 150px;
+    margin: auto;
+
+    &:hover {
+      background-color: $yellow;  
+    }
+  }
+
+  .login-btn2 {
+    background-color: $yellow-50;
+    color: $blue;
+    padding: .75rem;
+    font-size: 10px;
+    width: 150px;
+    margin: auto;
+    margin-top: 3rem;
+    
+    &:hover {
+      background-color: $yellow;  
+    }
+  }
+
+  .send-btn {
+    background-color: $blue;
+    color: $yellow-50;
+    padding: .75rem;
+    font-size: 10px;
+    
+    &:hover {
+      background-color: $blue-50;  
+    }
+  }
+}
