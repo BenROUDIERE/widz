@@ -8,6 +8,7 @@
 
 
 ## VIVACE
+Plant.destroy_all
 
 plant = Plant.new(
 name: "Geranium",

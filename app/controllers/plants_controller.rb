@@ -12,6 +12,8 @@ class PlantsController < ApplicationController
   
   def show
     @plant = Plant.find(params[:id])
+    @balcony_plant = BalconyPlant.new(plant_id: @plant.id)
+    @plant_is_already_on_balcony = BalconyPlant.where(plant: @plant, balcony: current_user.balcony).exists?
   end
 
   private
