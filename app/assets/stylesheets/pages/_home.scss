@@ -51,6 +51,14 @@
       color: white;
     }
   }
+  .begin-btn {
+    background-color: $yellow-50;
+    color: $blue;
+
+    &:hover {
+      background-color: $yellow;  
+    }
+  }
 
   .signup-btn {
     background-color: $yellow-50;
