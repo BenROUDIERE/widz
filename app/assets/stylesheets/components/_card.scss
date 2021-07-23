@@ -7,7 +7,6 @@
   }
 }
 
-
 /* CARD 1 */
 .card-plant {
   height: auto;
@@ -64,6 +63,19 @@
     }
     .fas:before {
       content: "\f067";
+    }
+    #add-new-plant-suggestion {
+      color: white;
+      background: $yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      padding: .75rem;
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-content: center;
     }
     .plant {
       position: absolute;

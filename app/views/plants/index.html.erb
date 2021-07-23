@@ -1,6 +1,8 @@
-<div class="container">
-  <h1 id="index-title">Dico des plantes</h1>
-  <div class="search">
+<div class="container" id="container-with-navbar">
+  <div class="title p-2">
+    <h4>Dico des plantes</h4>
+  </div>
+  <div class="search mb-3">
     <%= form_tag plants_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
@@ -13,7 +15,7 @@
     <% end %>
   </div>
 
-  <div class="cards-container">
+  <div class="cards-container mb-5">
     <div class="cards">
       <% @plants.each do |plant| %>
         <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
@@ -30,12 +32,6 @@
             </div>
             <div class="plant-img col-6">
               <%= cl_image_tag(plant.photo.key) %>
-              <input value="<%= plant.id %>" name="balcony[plant_ids][]" class="plant" type="checkbox" id="plant-<%= plant.id %>">
-              <label for="plant-<%= plant.id %>"
-                as: :check_boxes, input_html: { class: "tag-selector" }, 
-                item_wrapper_class= 'tag-item'>
-                <i class="fas"></i>
-              </label>
             </div>
           </div>
         </div>

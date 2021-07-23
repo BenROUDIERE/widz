@@ -1,6 +1,9 @@
 .container {
   background-color: $beige;
   height: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
+}
+#container-with-navbar {
+  min-height: calc(100vh - 8vh) !important;
 }
 

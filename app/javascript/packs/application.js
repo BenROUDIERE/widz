@@ -22,6 +22,7 @@ ActiveStorage.start()
 import "bootstrap";
 import { initAutocomplete} from '../plugins/init_autocomplete';
 import { initSwiper } from '../plugins/init_swiper';
+import { loadDynamicHomeText } from '../components/home';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -30,6 +31,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initAutocomplete();
   initSwiper();
+  loadDynamicHomeText();
 });
 
 import "controllers"
