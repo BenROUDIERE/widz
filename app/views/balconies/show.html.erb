@@ -4,7 +4,8 @@
   </div>
 
   <% if @balcony_plants.present? %>
-    <%= render "balcony_plants" %>
+    <%= render "suggested_plants" %>
+    <%# <%= render "balcony_plants" %> %>
   <% else %>
     <%= render "suggested_plants" %>
   <% end %>
