@@ -30,9 +30,11 @@
             </div>
             <div class="plant-img col-6">
               <%= cl_image_tag(plant.photo.key) %>
-              <input value="<%= plant.id %>" name="balcony[plant_ids][]" type="checkbox" id="plant-<%= plant.id %>">
-              <label for="plant-<%= plant.id %>">
-                <i class="fas fa-plus"></i>
+              <input value="<%= plant.id %>" name="balcony[plant_ids][]" class="plant" type="checkbox" id="plant-<%= plant.id %>">
+              <label for="plant-<%= plant.id %>"
+                as: :check_boxes, input_html: { class: "tag-selector" }, 
+                item_wrapper_class= 'tag-item'>
+                <i class="fas"></i>
               </label>
             </div>
           </div>
