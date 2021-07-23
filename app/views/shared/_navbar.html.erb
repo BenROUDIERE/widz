@@ -1,16 +1,24 @@
 <div class=" navbar-custom fixed-bottom">
   <div class="nav-icon">
-    <div class="nav-link nav-home active">
-      <i class="fas fa-carrot"></i>
+    <div class="nav-link nav-home <%= "active" if current_page?(balcony_path(current_user.balcony)) %>">
+      <%= link_to balcony_path(current_user.balcony) do %>
+        <%= content_tag :span, "", :class => "fas fa-carrot" %>
+      <% end %>
     </div>
-    <div class="nav-link nav-notif">
-      <i class="fas fa-bell"></i>
+    <div class="nav-link nav-notif <%= "active" if current_page?(tasks_path) %>">
+      <%= link_to tasks_path do %>
+        <%= content_tag :span, "", :class => "fas fa-bell" %>
+      <% end %>
     </div>
-    <div class="nav-link nav-search">
-      <i class="fas fa-search"></i>
+    <div class="nav-link nav-search <%= "active" if current_page?(plants_path) %>">
+      <%= link_to plants_path do %>
+        <%= content_tag :span, "", :class => "fas fa-search" %>
+      <% end %>
     </div>
-    <div class="nav-link nav-user">
-      <i class="fas fa-user"></i>
+    <div class="nav-link nav-user <%= "active" if current_page?(balcony_path(current_user.balcony)) %>">
+      <%= link_to balcony_path(current_user.balcony) do %>
+        <%= content_tag :span, "", :class => "fas fa-user" %>
+      <% end %>
     </div>
   </div>
 </div>

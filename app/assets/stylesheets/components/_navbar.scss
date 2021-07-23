@@ -7,6 +7,12 @@
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    :hover {
+      background: $blue;
+      .fas {
+        color: $yellow;
+      }
+    }
   }
 
   .nav-link {
@@ -20,7 +26,6 @@
     font-size: 1.25rem;
     color:$blue;
   }
-
   .active {
     background: $blue;
     

@@ -36,7 +36,11 @@
       -webkit-box-orient: vertical;
     }
   }
-
+  .btn-warning {
+    background-color: $yellow;
+    border-color:$yellow;
+    color: white;
+  }
   .card-subtitle {
     text-transform: uppercase;
     color: $yellow;
@@ -74,7 +78,7 @@
 /* CARD 2 */
 .card-plant-min {
   height: auto;
-  width: 200px !important;
+  width: 150px !important;
 }
 
 .card-plant-min .card-img-top {
