@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 #home_container {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(home_pic.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url("home_pic.jpg");
     width: 100vw;
     height: 100vh;
     text-align: center;

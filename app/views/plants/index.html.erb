@@ -1,38 +1,43 @@
-<h1 id="index-title">Dico des plantes</h1>
-<div class="search">
-  <%= form_tag plants_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "searchTerm",
-      placeholder: "Nom de plante ou catégorie"
-    %>
-    <button type="submit" class="searchButton">
-    <i <%= submit_tag "Search", class: "fa fa-search" %></i>
-    </button>
-  <% end %>
-</div>
-
-<div class="cards-container">
-  <div class="cards">
-    <% @plants.each do |plant| %>
-      <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
-        <div class="row g-0">
-            <div class="col-md-8">
-                <div class="card-body">
-                    <p class="card-subtitle"><%= plant.category %></p>
-                    
-                    <h5 class="card-title"><%= plant.name %></h5>
-                    <p class="card-text"><%= plant.description %></p>
-                    <i class="material-icons mr-2">Arroser tous les <%= plant.water_frequency_in_days %> jours</i>
-                    <%= link_to 'Details', plant_path(plant), class:"btn btn-warning" %>
-                </div>
-            </div>
-            <div class="plant-img col-md-4">
-                <%= cl_image_tag(plant.photo.key) %>
-                <i class="fas fa-seedling"></i>
-            </div>
-        </div>
-      </div>
+<div class="container">
+  <h1 id="index-title">Dico des plantes</h1>
+  <div class="search">
+    <%= form_tag plants_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "searchTerm",
+        placeholder: "Nom de plante ou catégorie"
+      %>
+      <button type="submit" class="searchButton">
+      <i <%= submit_tag "Search", class: "fa fa-search" %></i>
+      </button>
     <% end %>
   </div>
-</div>
+
+  <div class="cards-container">
+    <div class="cards">
+      <% @plants.each do |plant| %>
+        <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
+          <div class="row">
+            <div class="col-6 card-desc">
+              <div class="card-body">
+                <p class="card-subtitle"><%= plant.category %></p>
+                
+                <h5 class="card-title"><%= plant.name %></h5>
+                <p class="card-text"><%= plant.description %></p>
+                <%# <i class="material-icons mr-2">Arroser tous les <%= plant.water_frequency_in_days jours</i> %>
+                <%= link_to 'Details', plant_path(plant), class:"btn btn-warning" %>
+              </div>
+            </div>
+            <div class="plant-img col-6">
+              <%= cl_image_tag(plant.photo.key) %>
+              <input value="<%= plant.id %>" name="balcony[plant_ids][]" type="checkbox" id="plant-<%= plant.id %>">
+              <label for="plant-<%= plant.id %>">
+                <i class="fas fa-plus"></i>
+              </label>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>  
