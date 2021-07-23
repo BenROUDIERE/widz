@@ -1,45 +1,44 @@
-<h1>Plants#show</h1>
-<p>Find me in app/views/plants/show.html.erb</p>
-
-<h1 id="index-title">Détails pour votre <%= @plant.name %></h1>
-
-<div class="row card-product" id="plant_card">
-
-  <div class="col-4">
+<br>
+<div class="container">
+  <div class="title">
+    <h4 id="index-title"><%= @plant.name %></h4>
+  </div>
+  <div class="row">
     <%= cl_image_tag(@plant.photo.key,width: 450, height: 350, crop: :fill) %>
   </div>
-
-  <div class="col-6">
+  <div class="card-product" id="plant_card">
     <div class="mx-2">
-      <div class="d-flex justify-content-end">
-        <div>Votre <%=@plant.name%> est à arroser tous les <strong><%= @plant.water_frequency_in_days%></strong> jours</div>
-      </div>
-      <div>
-        <div class="card-product-infos">
-          <h2><%= @plant.name %></h2>
-
-          <p><%= @plant.description %>
-          <br>
-          <br>
-            Catégorie : <strong><%= @plant.category %></strong>
-          <br>
-            Meilleur moment pour mettre en terre : <strong><%= @plant.plantation_months %></strong>
-          <br>
-            Votre <%= @plant.name %> sera au top en : <strong><%= @plant.harvest_months %></strong>
-          <br>
-            Attention quand la température sera en dessous de <strong><%= @plant.min_temp %>°C</strong> et au dessus de <strong><%= @plant.max_temp %>°C</strong>
-          <br>
-            Respecter un espacement de <strong><%= @plant.spacing_in_cm %>cm</strong> entre chaques plantes
-          <br>
-            Luminosité : <strong><%= @plant.luminosity %></strong>
-          <br>
-            Besoins en eau : <strong><%= @plant.water_need %></strong>
-          <br>
-            Les principales maladies sont = <%= @plant.disease %>
-          </p>
-        </div>
-      </div>
+    <% if current_user.balcony && !@plant_is_already_on_balcony %>
+      <%= simple_form_for [current_user.balcony, @balcony_plant], method: :post do |f| %>
+        <%= f.hidden_field :plant_id %>
+        <%= f.submit "Ajouter cette plante", class: "btn btn-success" %>
+      <% end %>
+    <% end %>
+    <div class="d-flex justify-content-end">
+      <div>Votre <%=@plant.name%> est à arroser tous les <strong><%= @plant.water_frequency_in_days%></strong> jours</div>
     </div>
+    <br>
+      <div class="card-product-infos">
+        <p><%= @plant.description %>
+        <br>
+        <br>
+          Catégorie : <strong><%= @plant.category %></strong>
+        <br>
+          Meilleur moment pour mettre en terre : <strong><%= @plant.plantation_months %></strong>
+        <br>
+          Votre <%= @plant.name %> sera au top en : <strong><%= @plant.harvest_months %></strong>
+        <br>
+          Attention quand la température sera en dessous de <strong><%= @plant.min_temp %>°C</strong> et au dessus de <strong><%= @plant.max_temp %>°C</strong>
+        <br>
+          Respecter un espacement de <strong><%= @plant.spacing_in_cm %>cm</strong> entre chaques plantes
+        <br>
+          Luminosité : <strong><%= @plant.luminosity %></strong>
+        <br>
+          Besoins en eau : <strong><%= @plant.water_need %></strong>
+        <br>
+          Les principales maladies sont = <%= @plant.disease %>
+        </p>
+      </div>
+    </div>    
   </div>
-
 </div>

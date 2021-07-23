@@ -11,8 +11,10 @@ before_action :set_balcony, only: [:show]
     @balcony = Balcony.new(balcony_params)
 
     @balcony.user = @user
+    
     if @balcony.save
-      redirect_to balcony_plant_path(@user)
+
+      redirect_to balcony_path(@balcony)
     else
       #raise
       render :new

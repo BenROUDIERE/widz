@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :plants, only: [:index, :show]
   
   resources :balconies, only: [:new, :create, :show] do
-    resources :balcony_plants, only: [] do
+    resources :balcony_plants, only: [:create] do
       collection do
         post :batch_create # cf tuto batch delete stimulus
       end

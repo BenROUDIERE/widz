@@ -4,4 +4,6 @@ class BalconyPlant < ApplicationRecord
   has_many :tasks, dependent: :destroy
 
   attribute :planted, :boolean, default: true
+
+  validates :plant_id, uniqueness: { scope: :balcony_id }
 end

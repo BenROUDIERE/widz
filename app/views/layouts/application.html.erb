@@ -14,10 +14,13 @@
   </head>
 
   <body>
-    <% unless current_page?(root_path) || new_user_registration_path || new_user_session_path %>
+    <% unless current_page?(root_path) || 
+              current_page?(new_user_registration_path) || 
+              current_page?(new_user_session_path) || 
+              current_page?(new_balcony_path) %>
     <%= render 'shared/navbar' %>
     <% end %>
-    <% unless current_page?(root_path) %>
+    <% unless current_page?(root_path) || current_page?(new_user_registration_path) || current_page?(new_user_session_path) %>
     <%= render 'shared/flashes' %>
     <% end %>
 
