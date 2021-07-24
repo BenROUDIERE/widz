@@ -16,6 +16,7 @@
                 <div class="swiper-slide">
                   <div class="center"> 
                     <i class="fas fa-pen"></i><%= f.input :title, :label => 'Comment veux-tu appeler ton balcon ?', 
+                    collection_wrapper_class: 'category-wrapper',
                     placeholder: 'Mon Balcowidz' %>
                   </div>
                 </div>
@@ -23,6 +24,7 @@
                   <div class="center"> 
                     <i class="far fa-building"></i><%= f.input :city, :label => 'Où est-ce que tu vis ?', 
                     id:"balcony_city", 
+                    collection_wrapper_class: 'category-wrapper',
                     placeholder: 'Moncuq est accepté...' %>
                   </div>
                 </div>
@@ -30,7 +32,8 @@
                   <div class="center"> 
                     <i class="fab fa-pagelines"></i><%= f.input :categories, :label => 'Tu veux quel type de plantes sur ton balcon ? (tu peux en choisir plusieurs)', 
                     prompt: 'Plantes comestibles, vivaces etc.', 
-                    collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], 
+                    collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'],
+                    collection_wrapper_class: 'category-wrapper', 
                     as: :check_boxes, input_html: { class: "tag-selector" }, 
                     item_wrapper_class: 'tag-item' %>
                   </div>
