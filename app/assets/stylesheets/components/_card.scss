@@ -105,13 +105,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
-  grid-gap: 1rem;
+  grid-gap: 1.75rem;
   place-items: center;
 }
 
 .card-plant-min {
   height: auto;
-  width: 150px !important;
+  width: 160px !important;
 }
 
 .card-plant-min .card-img-top {

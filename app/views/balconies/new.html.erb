@@ -28,19 +28,16 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-
-
                     <i class="fab fa-pagelines"></i><%= f.input :categories, :label => 'Tu veux quel type de plantes sur ton balcon ? (tu peux en choisir plusieurs)', 
                     prompt: 'Plantes comestibles, vivaces etc.', 
                     collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], 
                     as: :check_boxes, input_html: { class: "tag-selector" }, 
                     item_wrapper_class: 'tag-item' %>
-
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-                    <i class="fas fa-faucet"></i><%= f.input :water_need, :label => "Niveau entretien on peut t'en demander :", 
+                    <i class="fas fa-faucet"></i><%= f.input :water_need, :label => "Niveau entretien tu es plutôt :", 
                         as: :radio_buttons, 
                         class:'form-check-inline', 
                         prompt: 'Sois le plus réaliste possible !', 
@@ -78,8 +75,12 @@
             </div>
           <% end %>
         </div>
+      <div class="title">
+        <h6 class="retour">Prècèdent</h6>
+        <h6 class="suivant">Suivant</h6>
       </div>
+      </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     </div>
   </div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-button-next"></div>
