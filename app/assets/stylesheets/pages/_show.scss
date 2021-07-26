@@ -1,0 +1,55 @@
+.plant-container {
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    
+
+    .row img {
+        width: 100vw;
+        background-size: cover;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #plant_show_button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn-add-plant {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .logo_water_lum {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        align-items: center;
+    }
+
+    .plant-temp {
+        text-align: center;
+    }
+
+    .bi {
+        font-size: 2rem;
+    }
+
+    .bi-brightness-high-fill,
+    .bi-cloud-sun-fill,
+    .bi-clouds-fill {
+        font-size: 3.5rem;
+        color: $yellow;
+    }
+    .bi-thermometer-half {
+        color: $green;
+    }
+    
+    .bi-droplet,
+    .bi-droplet-half,
+    .bi-droplet-fill {
+        color: $blue;
+    }
+}

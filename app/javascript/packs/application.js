@@ -20,6 +20,7 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { initAutocomplete} from '../plugins/init_autocomplete';
 import { initSwiper } from '../plugins/init_swiper';
 import { loadDynamicHomeText } from '../components/home';
