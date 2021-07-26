@@ -1,7 +1,3 @@
-body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
-}
 
 .search {
   position: relative;
@@ -10,6 +6,10 @@ body{
   form {
     margin: auto;
     display: flex;
+  }
+  body{
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
   }
 }
 
@@ -24,12 +24,12 @@ body{
 }
 .searchTerm:hover {
   width: 300px;
-  border: 3px solid lightgrey;
+  border: 3px solid $yellow;
   border-right: none;
   height: 36px;
   border-radius: 5px 5px 5px 5px;
   outline: none;
-  color: lightgrey;
+  color: $yellow;
 }
 .searchTerm:focus{
   color: black;
@@ -50,8 +50,8 @@ body{
 .searchButton:hover {
   width: 40px;
   height: 36px;
-  border: 1px solid #6c757d;
-  background: #6c757d;
+  border: 1px solid $yellow;
+  background: $yellow;
   text-align: center;
   color: #fff;
   border-radius: 0 5px 5px 0;
