@@ -16,8 +16,8 @@ description: "Tout convient à cette plante vivace : en adoptant le géranium vi
 luminosity: "peu ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 7,
-plantation_months: ["February", "March", "April","September", "December"],
-harvest_months:["June", "July", "September"],
+plantation_months: ["Février", "Mars", "Avril","Septembre", "Décembre"],
+harvest_months:["Juin", "Juillet", "Septembre"],
 min_temp: 10,
 max_temp: 15,
 spacing_in_cm: 30,
@@ -33,8 +33,8 @@ description: "L’agapanthe est une merveilleuse plante vivace qui fleurit en é
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 7,
-plantation_months: ["February", "March", "April",  "May"],
-harvest_months:["June", "July", "September"],
+plantation_months: ["Février", "Mars", "Avril",  "Mai"],
+harvest_months:["Juin", "Juillet", "Septembre"],
 min_temp: 10,
 max_temp: 30,
 spacing_in_cm: 25,
@@ -50,8 +50,8 @@ description: "la rose trémière naine est une plante qui mesure de 60 à 70 cen
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 5,
-plantation_months: ["February", "March", "April",  "May"],
-harvest_months:["February", "March", "April",  "May"],
+plantation_months: ["Février", "Mars", "Avril",  "Mai"],
+harvest_months:["Février", "Mars", "Avril",  "Mai"],
 min_temp: -28,
 max_temp: 30,
 spacing_in_cm: 25,
@@ -69,8 +69,8 @@ description: "La plante fait partie des herbes aromatiques très utilisées en c
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "important", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 2,
-plantation_months: ["March", "April",  "May"],
-harvest_months:["July", "August", "September"],
+plantation_months: ["Mars", "Avril",  "Mai"],
+harvest_months:["Juillet", "Aout", "Septembre"],
 min_temp: 10,
 max_temp: 40,
 spacing_in_cm: 30,
@@ -86,8 +86,8 @@ description: "Le Romarin est une plante à croissance lente de la famille des la
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "peu", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 10,
-plantation_months: ["May", "June"],
-harvest_months:["June", "July", "August", "September"],
+plantation_months: ["Mai", "Juin"],
+harvest_months:["Juin", "Juillet", "Aout", "Septembre"],
 min_temp: -10,
 max_temp: 40,
 spacing_in_cm: 40,
@@ -103,8 +103,8 @@ description: "C’est l’une des fines herbes à avoir toujours sous la main. E
 luminosity: "peu ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "peu", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 10,
-plantation_months: ["February", "March", "April"],
-harvest_months:["March", "April", "May", "June", "July", "August", "September", "October"],
+plantation_months: ["Février", "Mars", "Avril"],
+harvest_months:["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre"],
 min_temp: -5,
 max_temp: 45,
 spacing_in_cm: 50,
@@ -120,8 +120,8 @@ description: "Le thym s’adapte à tous les types de sol, en particulier les so
 luminosity: "peu ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 5,
-plantation_months: ["April", "May", "June"],
-harvest_months:["March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February"],
+plantation_months: ["Avril", "Mai", "Juin"],
+harvest_months:["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février"],
 min_temp: -10,
 max_temp: 45,
 spacing_in_cm: 20,
@@ -137,8 +137,8 @@ description: "Le romarin est une plante à croissance lente de la famille des la
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "faible", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 8,
-plantation_months: ["May", "June"],
-harvest_months:["June", "July", "August", "September"],
+plantation_months: ["Mai", "Juin"],
+harvest_months:["Juin", "Juillet", "Aout", "Septembre"],
 min_temp: -10,
 max_temp: 45,
 spacing_in_cm: 40,
@@ -154,8 +154,8 @@ description: "La Stevia est une plante à germination difficile et irrégulière
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 5,
-plantation_months: ["March", "April", "May", "June", "July", "August", "September", "October"],
-harvest_months:["March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February"],
+plantation_months: ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre"],
+harvest_months:["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février"],
 min_temp: 10,
 max_temp: 45,
 spacing_in_cm: 20,
@@ -173,8 +173,8 @@ description: "Le Mini-pommier Gala, est un arbre fruitier qui apporte un ornemen
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 6,
-plantation_months: ["February", "March", "April", "May"],
-harvest_months:["October", "November"],
+plantation_months: ["Février", "Mars", "Avril", "Mai"],
+harvest_months:["Octobre", "Novembre"],
 min_temp: -15,
 max_temp: 35,
 spacing_in_cm: 80,
@@ -190,8 +190,8 @@ description: "De par sa dimension réduite, le mini-cerisier Spur ‘Van’ (Pru
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 5,
-plantation_months: ["February", "March", "April", "May", "October", "November", "December"],
-harvest_months:["june"],
+plantation_months: ["Février", "Mars", "Avril", "Mai", "Octobre", "Novembre", "Décembre"],
+harvest_months:["Juin"],
 min_temp: -10,
 max_temp: 35,
 spacing_in_cm: 50,
@@ -207,8 +207,8 @@ description: "Variété remarquable pour son port compact et retombant et surtou
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 5,
-plantation_months: ["February", "March", "April", "May", "October", "November", "December"],
-harvest_months:["june", "july", "september"],
+plantation_months: ["Février", "Mars", "Avril", "Mai", "Octobre", "Novembre", "Décembre"],
+harvest_months:["Juin", "Juillet", "Septembre"],
 min_temp: -5,
 max_temp: 35,
 spacing_in_cm: 40,
@@ -224,8 +224,8 @@ description: "La tomate cerise est l’un des fruits/légumes, les plus faciles 
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "important", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 2,
-plantation_months: ["March", "April", "May"],
-harvest_months:["june", "july", "september"],
+plantation_months: ["Mars", "Avril", "Mai"],
+harvest_months:["Juin", "Juillet", "Septembre"],
 min_temp: 8,
 max_temp: 45,
 spacing_in_cm: 60,
@@ -243,8 +243,8 @@ description: "L'AZALEA japonica ou AZALEE DU JAPON rouge est un arbuste persista
 luminosity: "ombre", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 5,
-plantation_months: ["February", "March", "April", "May", "June", "October", "November", "December"],
-harvest_months:["March", "April", "May"],
+plantation_months: ["Février", "Mars", "Avril", "Mai", "Juin", "Octobre", "Novembre", "Décembre"],
+harvest_months:["Mars", "Avril", "Mai"],
 min_temp: -10,
 max_temp: 35,
 spacing_in_cm: 50,
@@ -260,7 +260,7 @@ description: "Le pin nain Marie Bregeon est un petit conifère à croissance bas
 luminosity: "ombre", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "peu", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 15,
-plantation_months: ["March", "April", "May", "June", "July", "August", "September", "October", "November", "December", "January", "February"],
+plantation_months: ["Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février"],
 harvest_months:[],
 min_temp: -10,
 max_temp: 35,
@@ -277,7 +277,7 @@ description: "Ces arbustes sur tige sont peu encombrants (d'une hauteur de 1,50 
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "peu", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 15,
-plantation_months: ["March", "April", "May", "September", "October", "November", "December"],
+plantation_months: ["Mars", "Avril", "Mai", "Septembre", "Octobre", "Novembre", "Décembre"],
 harvest_months:[],
 min_temp: -15,
 max_temp: 40,
@@ -295,7 +295,7 @@ description: "Ces arbustes sur tige sont peu encombrants (d'une hauteur de 1,50 
 luminosity: "ensoleillé", #['ombre', 'peu ensoleillé', 'ensoleillé']
 water_need: "moyen", #['peu', 'moyen ', 'important']
 water_frequency_in_days: 10,
-plantation_months: ["March", "April", "May", "June", "September", "October", "November", "December"],
+plantation_months: ["Mars", "Avril", "Mai", "Juin", "Septembre", "Octobre", "Novembre", "Décembre"],
 harvest_months:[],
 min_temp: 0,
 max_temp: 40,

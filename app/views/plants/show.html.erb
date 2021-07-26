@@ -1,44 +1,83 @@
-<br>
-<div class="container">
+<div class="container plant-container">
   <div class="title">
     <h4 id="index-title"><%= @plant.name %></h4>
   </div>
+
   <div class="row">
-    <%= cl_image_tag(@plant.photo.key,width: 450, height: 350, crop: :fill) %>
+    <%= cl_image_tag(@plant.photo.key, crop: :fill) %>
   </div>
+
   <div class="card-product" id="plant_card">
-    <div class="mx-2">
-    <% if current_user.balcony && !@plant_is_already_on_balcony %>
-      <%= simple_form_for [current_user.balcony, @balcony_plant], method: :post do |f| %>
-        <%= f.hidden_field :plant_id %>
-        <%= f.submit "Ajouter cette plante", class: "btn btn-success" %>
+    <div class="btn-add-plant">
+      <% if current_user.balcony && !@plant_is_already_on_balcony %>
+        <%= simple_form_for [current_user.balcony, @balcony_plant], method: :post do |f| %>
+          <%= f.hidden_field :plant_id %>
+          <%= f.submit "Ajouter cette plante", class: "btn btn-success", id:"plant_show_button" %>
+        <% end %>
       <% end %>
-    <% end %>
-    <div class="d-flex justify-content-end">
-      <div>Votre <%=@plant.name%> est à arroser tous les <strong><%= @plant.water_frequency_in_days%></strong> jours</div>
     </div>
-    <br>
-      <div class="card-product-infos">
-        <p><%= @plant.description %>
-        <br>
-        <br>
-          Catégorie : <strong><%= @plant.category %></strong>
-        <br>
-          Meilleur moment pour mettre en terre : <strong><%= @plant.plantation_months %></strong>
-        <br>
-          Votre <%= @plant.name %> sera au top en : <strong><%= @plant.harvest_months %></strong>
-        <br>
-          Attention quand la température sera en dessous de <strong><%= @plant.min_temp %>°C</strong> et au dessus de <strong><%= @plant.max_temp %>°C</strong>
-        <br>
-          Respecter un espacement de <strong><%= @plant.spacing_in_cm %>cm</strong> entre chaques plantes
-        <br>
-          Luminosité : <strong><%= @plant.luminosity %></strong>
-        <br>
-          Besoins en eau : <strong><%= @plant.water_need %></strong>
-        <br>
-          Les principales maladies sont = <%= @plant.disease %>
-        </p>
+
+    <div class="logo_water_lum">
+      <div>
+        <% if @plant.luminosity == "ombre"%>
+          <i class="bi bi-clouds-fill"></i>
+        <% elsif @plant.luminosity == "peu ensoleillé" %>
+          <i class="bi bi-cloud-sun-fill"></i>
+        <% else %>
+          <i class="bi bi-brightness-high-fill"></i>
+        <% end %>
       </div>
+      
+      <div class="plant-temp">
+        <i class="bi bi-thermometer-half"></i>
+        <p><strong><%= @plant.min_temp %> / <%= @plant.max_temp %>°C</strong></p>
+      </div>
+
+      <div>
+        <% if @plant.water_need == "peu"%>
+          <i class="bi bi-droplet"></i>
+        <% elsif @plant.luminosity == "moyen" %>
+          <i class="bi bi-droplet-half"></i>
+        <% else %>
+          <i class="bi bi-droplet-fill"></i>
+        <% end %>
+      </div>
+    </div>
+     
+    <br>
+    <div class="card-product-infos">
+      <div class="border border-dark p-3 mb-10 text-justify">       
+        <p>
+          Les mois de <% @plant.plantation_months.each do |i| %>
+            <strong><%= i %></strong>,
+          <% end %>
+          <span>sont les plus propices pour mettre en terre votre <strong><%=@plant.name%></strong>.</span>
+        </p>
+
+        <p>
+          Aux mois de <% @plant.harvest_months.each do |i| %>  
+            <strong><%= i %></strong>,
+          <% end %>
+          <span>votre <strong><%= @plant.name %></strong> sera au top.</span>
+        </p>
+
+        <p>Pensez à protéger votre plante lorsque la température sera en dessous de <strong><%= @plant.min_temp %>°C</strong> et au dessus de <strong><%= @plant.max_temp %>°C.</strong></p>
+        <p>Respectez un espacement de <strong><%= @plant.spacing_in_cm %>cm</strong> avec les autres plantes.</p>
+        <br>
+
+        <p>Exposition: <strong><%= @plant.luminosity %></strong></p>
+        <br>
+
+        <p><strong>Besoin en eau <%= @plant.water_need %>.</strong></p>
+        <br>
+
+        <p>Votre <%=@plant.name%> est à arroser tous les <strong><%= @plant.water_frequency_in_days%></strong> jours.</p>
+      </div>
+
+      <p class="mt-10 mb-20 text-justify p-2">
+        <br>
+        <%= @plant.description %>
+      </p>
     </div>    
   </div>
 </div>
