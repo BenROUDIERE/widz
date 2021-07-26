@@ -6,7 +6,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: $yellow;
+    color: black;
     background-color: $beige;
     background-clip: padding-box;
     border: 1px solid $yellow;
@@ -15,9 +15,10 @@
   }
   
   i {
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 40px;
+  padding: 15px;
   color: $yellow;
+  margin-bottom: 2rem;
   }
 
   .title {
@@ -43,9 +44,9 @@
   
   .tag-selector + label {
     cursor: pointer;
+    height: 5rem;
     display: inline-block;
-    font-size: 0.7rem;
-    border-radius: 50rem;
+    font-size: 0.95rem;
     padding: 0.1rem 0.5rem;
     background-color: $beige;
     color: $yellow;
@@ -57,15 +58,29 @@
     color: white;
   }
 
+  .col-form-label {
+    margin-bottom: 25px;
+}
+
   .form-check-label {
     width: 100px;
   }
+  .category-wrapper-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
 
+    label {
+      margin: 1rem;
+      display: grid;
+      place-content: center;
+    }
+  }
   .category-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    padding-top: 2rem;
   }
   
   .category-item {
@@ -81,13 +96,12 @@
     display: block;
     cursor: pointer;
     box-sizing: border-box;
-    width: 100px;
-    font-size: 12px;
+    width: 250px;
+    font-size: 15px;
     text-align: center;
-    padding: 5px 5px 10px 10px;
-    border: 1px solid #EAEAEA;
+    padding: 10px;
     border-radius: 4px;
-    background-color: white;
+    
   }
   
   .category-selector:checked + label {
@@ -96,60 +110,78 @@
   
   
   #balcony_water_need_un_peu + label {
-    color: $blue-70;
+    border: 1px solid $blue-50;
+    background-color: white;
+    color: $blue-50;
   }
   
   #balcony_water_need_un_peu:checked + label {
-    background-color: $blue-70;
-    border-color: $blue-70;
+    border: 1px solid $blue-50;
+    background-color: $blue-50;
+    color: white;
   }
   
   
   #balcony_water_need_beaucoup + label {
+    border: 1px solid $blue;
+    background-color: white;
     color: $blue;
   }
   
   #balcony_water_need_beaucoup:checked + label {
+    border: 1px solid $blue;
     background-color: $blue;
-    border-color: $blue;
+    color: white;
   }
   
   
   #balcony_water_need_rien_du_tout + label {
-    color: $blue-50;
+    border: 1px solid $blue-10;
+    background-color: white;
+    color: $blue-10;
   }
   
   #balcony_water_need_rien_du_tout:checked + label {
-    background-color: $blue-50;
-    border-color: $blue-50;
+    border: 1px solid $blue-10;
+    background-color: $blue-10;
+    color: white;
   }
 
   #balcony_rain_exposed_casi-sec + label {
-    color: $blue-50;
+    border: 1px solid $blue-10;
+    background-color: white;
+    color: $blue-10;
   }
   
   #balcony_rain_exposed_casi-sec:checked + label {
-    background-color: $blue-50;
-    border-color: $blue-50;
+    border: 1px solid $blue-10;
+    background-color: $blue-10;
+    color: white;
   }
   
   
   #balcony_rain_exposed_pas_trop_mal_arrosé + label {
-    color: $blue-70;
+    border: 1px solid $blue-50;
+    background-color: white;
+    color: $blue-50;
   }
   
   #balcony_rain_exposed_pas_trop_mal_arrosé:checked + label {
-    background-color: $blue-70;
-    border-color: $blue-70;
+    border: 1px solid $blue-50;
+    background-color: $blue-50;
+    color: white;
   }
   
   
   #balcony_rain_exposed_arrosé_comme_jamais + label {
+    border: 1px solid $blue;
+    background-color: white;
     color: $blue;
   }
   
   #balcony_rain_exposed_arrosé_comme_jamais:checked + label {
-    background-color: $blue;
-    border-color: $blue;
+    border: 1px solid $blue;
+    background-color: $yellow;
+    color: $blue;
   }
 }
