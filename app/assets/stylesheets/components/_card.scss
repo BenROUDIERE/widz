@@ -12,8 +12,57 @@
   height: auto;
 }
 
-.aromatique {
+.comestible {
+  border: 1px solid $blue !important;
+
+  .card-subtitle {
+    color: $blue;
+  }
+
+  .btn-warning {
+    background-color: $blue;
+    border-color:$blue;
+    color: white;
+  }
+}
+.vivace {
+  border: 1px solid $green !important;
+
+  .card-subtitle {
+    color: $green;
+  }
+
+  .btn-warning {
+    background-color: $green;
+    border-color:$green;
+    color: white;
+  }
+}
+.fruits {
+  border: 1px solid $orange !important;
+
+  .card-subtitle {
+    color: $orange;
+  }
+
+  .btn-warning {
+    background-color: $orange;
+    border-color:$orange;
+    color: white;
+  }
+}
+.arbuste {
   border: 1px solid $yellow !important;
+
+  .card-subtitle {
+    color: $yellow;
+  }
+
+  .btn-warning {
+    background-color: $yellow;
+    border-color:$yellow;
+    color: white;
+  }
 }
 
 .card-plant {
@@ -35,14 +84,9 @@
       -webkit-box-orient: vertical;
     }
   }
-  .btn-warning {
-    background-color: $yellow;
-    border-color:$yellow;
-    color: white;
-  }
+
   .card-subtitle {
     text-transform: uppercase;
-    color: $yellow;
     font-size: 10px;
   }
   

@@ -8,7 +8,7 @@
 
 <div class="grid-plants mb-5">
   <% @balcony_plants.each do |balcony_plant| %>
-    <div class="card aromatique card-plant-min mb-3" style="width: 18rem;">
+    <div class="card <%= balcony_plant.category %> card-plant-min mb-3" style="width: 18rem;">
       <%= link_to plant_path(balcony_plant.plant) do %>
         <%= content_tag :span, "", class:"plant-img"%>
         <%= cl_image_tag(balcony_plant.plant.photo.key, class: "card-img-top") %>
