@@ -2,7 +2,7 @@
   <h5>Voici une suggestion de plantes ètablie selon vos rèponses</h5>
 </div>
 <div class="remarks">
-  <h7>Remarques sur vos plantes</h7>
+  <h6>Remarques sur vos plantes</h6>
   <p>Votre géranium a besion d'eau et ne doit pas être planté à côté d'un cactus</p>
 </div>
 <div class="cards-container">
@@ -17,7 +17,6 @@
                 
                 <h5 class="card-title"><%= plant.name %></h5>
                 <p class="card-text"><%= plant.description %></p>
-                <%# <i class="material-icons mr-2">Arroser tous les <%= plant.water_frequency_in_days jours</i> %>
                 <%= link_to 'Details', plant_path(plant), class:"btn btn-warning" %>
               </div>
             </div>
@@ -36,17 +35,15 @@
     </div>
     <div class="add-plant">
       <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
-        <div class="row">
-          <div class="col-10 card-desc">
-            <div class="card-body">
-              <h5 class="card-title">Vous ne trouvez pas votre bonheur ?</h5>
-              <p class="card-text">Ajouter une nouvelle plante parmis toutes celles disponibles</p>
+        <div class="card-desc">
+          <div class="card-body">
+            <h5 class="card-title">Vous ne trouvez pas votre bonheur ?</h5>
+            <p class="card-text">Ajouter une nouvelle plante parmis toutes celles disponibles</p>
+            <div class="add-plant-img">
+              <%= link_to plants_path do %>
+                <i class="fas fa-plus" id="add-new-plant-suggestion"></i>
+              <% end %>
             </div>
-          </div>
-          <div class="plant-img col-6">
-          <%= link_to plants_path do %>
-            <i class="fas fa-plus" id="add-new-plant-suggestion"></i>
-          <% end %>
           </div>
         </div>
       </div>

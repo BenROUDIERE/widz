@@ -1,5 +1,5 @@
 <div class="container" id="container-with-navbar">
-  <div class="title p-2">
+  <div class="title">
     <h4>Dico des plantes</h4>
   </div>
   <div class="search mb-3">
@@ -10,7 +10,7 @@
         placeholder: "Nom de plante ou catégorie"
       %>
       <button type="submit" class="searchButton">
-      <i <%= submit_tag "Search", class: "fa fa-search" %></i>
+      <i><%= submit_tag "Search", class: "fa fa-search" %></i>
       </button>
     <% end %>
   </div>
@@ -26,7 +26,6 @@
                 
                 <h5 class="card-title"><%= plant.name %></h5>
                 <p class="card-text"><%= plant.description %></p>
-                <%# <i class="material-icons mr-2">Arroser tous les <%= plant.water_frequency_in_days jours</i> %>
                 <%= link_to 'Details', plant_path(plant), class:"btn btn-warning" %>
               </div>
             </div>
@@ -38,4 +37,4 @@
       <% end %>
     </div>
   </div>
-</div>  
+</div>
