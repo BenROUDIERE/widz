@@ -6,6 +6,7 @@ class TasksController < ApplicationController
   end
 
   def create
+    @balcony    = Balcony.where(user: current_user).find(params[:balcony_id])
     @plant      = Plant.find(params[:id])
     @task       = Task.new(task_params)
     @task.plant = @plant
@@ -14,7 +15,6 @@ class TasksController < ApplicationController
 
       redirect_to task_path(@task)
     else
-      #raise
       render :new
     end
   end

@@ -1,5 +1,5 @@
 <div class="title">
-  <h5>Voici une suggestion de plantes établie selon vos réponses</h5>
+  <h5>Voici une suggestion de plantes ètablie selon vos rèponses</h5>
 </div>
 <div class="remarks">
   <h7>Remarques sur vos plantes</h7>
@@ -34,23 +34,23 @@
         </div>
       <% end %>
     </div>
-    <%= f.submit "Valider mon balcon", class: "btn mb-3 btn-success" %>
-  <% end %>
-  <div class="add-plant mb-5">
-    <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
-      <div class="row">
-        <div class="col-10 card-desc">
-          <div class="card-body">
-            <h5 class="card-title">Vous ne trouvez pas votre bonheur ?</h5>
-            <p class="card-text">Ajouter une nouvelle plante parmis toutes celles disponibles</p>
+    <div class="add-plant">
+      <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
+        <div class="row">
+          <div class="col-10 card-desc">
+            <div class="card-body">
+              <h5 class="card-title">Vous ne trouvez pas votre bonheur ?</h5>
+              <p class="card-text">Ajouter une nouvelle plante parmis toutes celles disponibles</p>
+            </div>
           </div>
-        </div>
-        <div class="plant-img col-6">
-        <%= link_to plants_path do %>
-          <i class="fas fa-plus" id="add-new-plant-suggestion"></i>
-        <% end %>
+          <div class="plant-img col-6">
+          <%= link_to plants_path do %>
+            <i class="fas fa-plus" id="add-new-plant-suggestion"></i>
+          <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  <%= f.submit "Valider mon balcon", class: "btn btn-success mb-5", id: "btn-add-plant" %>
+  <% end %>
 </div>

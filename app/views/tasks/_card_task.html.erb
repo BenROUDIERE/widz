@@ -1,0 +1,21 @@
+<div class="cards-container mb-5">
+  <div class="cards">
+    <% @tasks.each do |task| %>
+      <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
+        <div class="row">
+          <div class="col-6 card-desc">
+            <div class="card-body">
+              <p class="card-subtitle"><%= task.category %></p>
+              
+              <h5 class="card-title"><%= task.title %></h5>
+              <p class="card-text"><%= plant.name %></p>
+            </div>
+          </div>
+          <div class="plant-img col-6">
+            <%= cl_image_tag(plant.photo.key) %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
