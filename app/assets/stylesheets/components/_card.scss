@@ -115,7 +115,7 @@
 }
 
 .card-plant-min .card-img-top {
-  height: 200px;
+  height: 170px;
   width: 100%;
   object-fit: cover;
 }
@@ -146,14 +146,17 @@
 }
 
 .card-plant-min .plant-title {
-  position: absolute;
-  bottom: 4rem;
   left: 0;
-  margin: 1rem;
-  color: $white;
+  padding: .6rem 0 0 .6rem;
 }
 
 /* CARD 3 */
+// .plant-img {
+//   background: #000000;
+//   background: -webkit-linear-gradient(bottom left, #000000, #FFFFFF);
+//   background: -moz-linear-gradient(bottom left, #000000, #FFFFFF);
+//   background: linear-gradient(to top right, #000000, #FFFFFF);
+// }
 .card-params {
   width: 200px !important;
   display: grid !important;
@@ -175,6 +178,37 @@
 .card-params h5 {
   text-align: center;
   margin-bottom: 2.5rem;
+}
+.logo_water_lum {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+.plant-temp {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.bi {
+  font-size: 1.5rem;
+}
+
+.bi-brightness-high-fill,
+.bi-cloud-sun-fill,
+.bi-clouds-fill {
+  font-size: 1.75rem;
+  color: $yellow;
+}
+.bi-thermometer-half {
+  color: $green;
+}
+
+.bi-droplet,
+.bi-droplet-half,
+.bi-droplet-fill {
+  color: $blue;
 }
 
 /* CARD 4 */
