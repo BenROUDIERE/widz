@@ -266,7 +266,7 @@ min_temp: -10,
 max_temp: 35,
 spacing_in_cm: 50,
 )
-file = URI.open("https://www.mesarbustes.fr/102239-large_default/pinus-nigra-marie-bregeon-r-pin-nain-boule.jpg")
+file = URI.open("https://www.mesarbustes.fr/138124-home_default/pinus-nigra-marie-bregeon-r-pin-nain-boule.jpg")
 plant.photo.attach(io: file, filename: "pin.jpg", content_type: "image/jpg")
 plant.save!
 

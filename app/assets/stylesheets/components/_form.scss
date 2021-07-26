@@ -147,13 +147,13 @@
     color: white;
   }
 
-  #balcony_rain_exposed_casi-sec + label {
+  #balcony_rain_exposed_quasi-sec + label {
     border: 1px solid $blue-10;
     background-color: white;
     color: $blue-10;
   }
   
-  #balcony_rain_exposed_casi-sec:checked + label {
+  #balcony_rain_exposed_quasi-sec:checked + label {
     border: 1px solid $blue-10;
     background-color: $blue-10;
     color: white;
@@ -181,7 +181,7 @@
   
   #balcony_rain_exposed_arrosé_comme_jamais:checked + label {
     border: 1px solid $blue;
-    background-color: $yellow;
-    color: $blue;
+    background-color: $blue;
+    color: $white;
   }
 }
