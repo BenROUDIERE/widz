@@ -9,7 +9,7 @@
   <%= simple_form_for @balcony, url: batch_create_balcony_balcony_plants_path(@balcony), method: :post do |f| %>
     <div class="cards">
       <% @suggested_plants.each do |plant| %>
-        <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
+        <div class="card <%= plant.category %> card-plant mb-3" style="max-width: 540px;">
           <div class="row">
             <div class="col-6 card-desc">
               <div class="card-body">
