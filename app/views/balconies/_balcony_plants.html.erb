@@ -5,18 +5,38 @@
   <h7>Remarques sur mes plantes</h7>
   <p>Votre géranium a besion d'eau et ne doit pas être planté à côté d'un cactus</p>
 </div>
+
 <div class="grid-plants mb-5">
   <% @balcony_plants.each do |balcony_plant| %>
-    <div class="card aromatique card-plant-min mb-3" style="width: 18rem;">
+    <div class="card <%= balcony_plant.category %> card-plant-min mb-3" style="width: 18rem;">
       <%= link_to plant_path(balcony_plant.plant) do %>
         <%= content_tag :span, "", class:"plant-img"%>
-        <%= cl_image_tag(balcony_plant.plant.photo.key, :class =>"card-img-top") %>
+        <%= cl_image_tag(balcony_plant.plant.photo.key, class: "card-img-top") %>
         <h5 class="plant-title card-title"><%= balcony_plant.plant.name %></h5>
       <% end %>
-      <div class="card-body">
-        <i class="fas fa-thermometer-three-quarters"></i>
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-tint"></i>
+      <div class="logo_water_lum">
+        <div>
+          <% if balcony_plant.plant.luminosity == "ombre"%>
+            <i class="bi bi-clouds-fill"></i>
+          <% elsif balcony_plant.plant.luminosity == "peu ensoleillé" %>
+            <i class="bi bi-cloud-sun-fill"></i>
+          <% else %>
+            <i class="bi bi-brightness-high-fill"></i>
+          <% end %>
+        </div>
+        <div class="plant-temp">
+          <i class="bi bi-thermometer-half"></i>
+          <p><strong><%= balcony_plant.plant.min_temp %> / <%= balcony_plant.plant.max_temp %>°C</strong></p>
+        </div>
+        <div>
+          <% if balcony_plant.plant.water_need == "peu"%>
+            <i class="bi bi-droplet"></i>
+          <% elsif balcony_plant.plant.luminosity == "moyen" %>
+            <i class="bi bi-droplet-half"></i>
+          <% else %>
+            <i class="bi bi-droplet-fill"></i>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
