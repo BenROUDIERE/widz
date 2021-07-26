@@ -1,4 +1,3 @@
-<br>
 <div class="container">
   <div class="title">
     <h4 id="index-title"><%= @plant.name %></h4>
@@ -13,6 +12,10 @@
         <%= f.hidden_field :plant_id %>
         <%= f.submit "Ajouter cette plante", class: "btn btn-success" %>
       <% end %>
+      <%# <% else %>
+        <%# <%= simple_form_for [current_user.balcony, @balcony_plant], method: :post do |f| %> 
+        <%# <%= f.submit "Ajouter une tâche", class: "btn btn-success" %> 
+      <%# <% end %> 
     <% end %>
     <div class="d-flex justify-content-end">
       <div>Votre <%=@plant.name%> est à arroser tous les <strong><%= @plant.water_frequency_in_days%></strong> jours</div>
