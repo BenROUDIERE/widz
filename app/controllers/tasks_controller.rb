@@ -7,7 +7,7 @@ class TasksController < ApplicationController
 
   def create
     @balcony    = Balcony.where(user: current_user).find(params[:balcony_id])
-    @plant      = Plant.find(params[:id])
+    @plant      = Plant.find(params[:plant_id])
     @task       = Task.new(task_params)
     @task.plant = @plant
     

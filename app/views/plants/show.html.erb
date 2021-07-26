@@ -1,9 +1,9 @@
 <div class="container plant-container">
-  <div class="title">
-    <h4 id="index-title"><%= @plant.name %></h4>
-  </div>
   <div class="row">
-    <%= cl_image_tag(@plant.photo.key, crop: :fill) %>
+    <div class="title">
+      <h4 id="index-title"><%= @plant.name %></h4>
+      <%= cl_image_tag(@plant.photo.key, crop: :fill) %>
+    </div>
   </div>
   <div class="card-product" id="plant_card">
     <div class="btn-add-plant">
