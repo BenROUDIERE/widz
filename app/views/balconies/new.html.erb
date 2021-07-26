@@ -1,6 +1,6 @@
 <div class="container" id="form-balcon">
   <div class="title">
-    <h3>Ton futur Balcon</h3>
+    <h5>Ton futur Balcon</h5>
     <br>
     <h6>Pour composer ton balcon, il nous faut quelques informations...</h6>
   </div>
@@ -16,6 +16,7 @@
                 <div class="swiper-slide">
                   <div class="center"> 
                     <i class="fas fa-pen"></i><%= f.input :title, :label => 'Comment veux-tu appeler ton balcon ?', 
+                    collection_wrapper_class: 'category-wrapper',
                     placeholder: 'Mon Balcowidz' %>
                   </div>
                 </div>
@@ -23,24 +24,23 @@
                   <div class="center"> 
                     <i class="far fa-building"></i><%= f.input :city, :label => 'Où est-ce que tu vis ?', 
                     id:"balcony_city", 
+                    collection_wrapper_class: 'category-wrapper',
                     placeholder: 'Moncuq est accepté...' %>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-
-
                     <i class="fab fa-pagelines"></i><%= f.input :categories, :label => 'Tu veux quel type de plantes sur ton balcon ? (tu peux en choisir plusieurs)', 
                     prompt: 'Plantes comestibles, vivaces etc.', 
-                    collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'], 
+                    collection: ['Comestible', 'Vivace', 'Fruits', 'Arbuste'],
+                    collection_wrapper_class: 'category-wrapper', 
                     as: :check_boxes, input_html: { class: "tag-selector" }, 
                     item_wrapper_class: 'tag-item' %>
-
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="center"> 
-                    <i class="fas fa-faucet"></i><%= f.input :water_need, :label => "Niveau entretien on peut t'en demander :", 
+                    <i class="fas fa-faucet"></i><%= f.input :water_need, :label => "Niveau entretien tu es plutôt :", 
                         as: :radio_buttons, 
                         class:'form-check-inline', 
                         prompt: 'Sois le plus réaliste possible !', 
@@ -77,9 +77,13 @@
               <div class="swiper-pagination"></div>
             </div>
           <% end %>
+        </div>
+      <div class="title">
+        <h6 class="retour">Prècèdent</h6>
+        <h6 class="suivant">Suivant</h6>
       </div>
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+      </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     </div>
   </div>
-</div>

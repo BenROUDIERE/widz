@@ -1,10 +1,10 @@
 .swiper-container {
-  height: 530px;
+  height: 460px;
   display: flex;
 }
 .swiper-slide {
   text-align: center;
-  display: grid;
+  display: flex;
   place-content: center;
   .center {
     height: 230px;
@@ -16,4 +16,29 @@
   label {
     margin-bottom: 2rem;
   }
+}
+.swiper-button-prev {
+  color: $blue-50 !important;
+  position : absolute !important;
+  left: 45px !important;
+  top: 700px !important;
+}
+
+.swiper-button-next {
+  color: $green !important;
+  position : absolute !important;
+  right: 45px !important;
+  top: 700px !important; 
+}
+
+.suivant {
+  position : absolute;
+  right: 35px !important;
+  bottom: -60px !important; 
+}
+
+.retour {
+  position : absolute !important;
+  left: 35px !important;
+  bottom: -60px !important; 
 }

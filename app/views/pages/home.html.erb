@@ -2,13 +2,13 @@
   <div class="home_wrapper">
     <div id="home_title">
       <h1>Widz</h1>
-      <h2>Never kill a plant again</h2>
+      <h2 id="home-typed-text"></h2>
     </div>
     <% if user_signed_in? %>
       <%= link_to 'Commencer', new_balcony_path, class: "home_button begin-btn" %>
     <% else%>
-      <%= link_to 'Sign up', new_user_registration_path, class: "btn home_button signup-btn" %>
-      <%= link_to 'Login', new_user_session_path, class: "btn home_button login-btn mt-2" %>
+      <%= link_to 'Créer un compte', new_user_registration_path, class: "btn home_button signup-btn" %>
+      <%= link_to 'Se connecter', new_user_session_path, class: "btn home_button login-btn mt-2" %>
 
     <% end %>
   </div>
