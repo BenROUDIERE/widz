@@ -73,9 +73,12 @@
     height: 100%;
     display: flex !important;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: space-between;
-    padding-right: 0;
+
+    .card-title {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
 
     .card-text {
       display: -webkit-box;
@@ -84,7 +87,11 @@
       -webkit-box-orient: vertical;
     }
   }
-
+  .btn-warning {
+    background-color: $yellow;
+    border-color:$yellow;
+    color: white;
+  }
   .card-subtitle {
     text-transform: uppercase;
     font-size: 10px;
@@ -92,6 +99,7 @@
   
   .plant-img {
     position: unset;
+
     .fas {
       color: $yellow;
       background: white;
@@ -105,33 +113,32 @@
       display: grid;
       place-content: center;
     }
+
     .fas:before {
       content: "\f067";
     }
+
     #add-new-plant-suggestion {
       color: white;
       background: $yellow;
-      border-radius: 50%;
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      padding: .75rem;
-      width: 36px;
-      height: 36px;
-      display: grid;
-      place-content: center;
+      position: unset;
+      margin-top: 1rem;
     }
+
     .plant {
       position: absolute;
       transform: scale(0);
     }
+    
     .plant+label i{
       cursor: pointer;
     }
+
     .plant:checked+label i:before {
       color: $green;
       content: "\f00c";
     }
+
     img{
       height: 100%;
       width: 100%;
@@ -139,6 +146,21 @@
       padding:  1rem;
       position: relative;
       padding-left: 0;
+    }
+  }
+
+  .add-plant-img {
+    display: flex;
+    justify-content: flex-end;
+
+    .fas {
+      color: $white;
+      background: $yellow;
+      position: initial;
+    }
+
+    .fas:before {
+      content: "\f067";
     }
   }
 }
@@ -296,8 +318,6 @@
   font-size: 12px;
   font-style: italic;
   color: $blue-10;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: .5rem;
 
