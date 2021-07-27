@@ -14,7 +14,11 @@
 
 .remarks {
   color: $blue-70;
+  margin: 2rem 0;
+  h6 {
+    text-transform: uppercase;
+  }
   p {
-    font-size: 12px;
+    font-size: 1rem;
   }
 }
