@@ -10,8 +10,14 @@
               <div class="col-6 card-desc">
                 <div class="card-body">
                   <p class="card-subtitle"><%= task.plant.name %></p>
-                  
-                  <h5 class="card-title"><%= task.title %></h5>
+                  <i class="fas fa-faucet"></i>
+                  <div>
+                    <% if task.plant.category == "arrosage"%>
+                      <i class="fas fa-faucet"></i>
+                    <% else task.plant.category == "abriter" %>
+                      <i class="fas fa-umbrella"></i>
+                    <% end %>
+                  </div>
                   <p class="card-subtitle"><strong><%= task.message %></strong></p>
                 </div>
               </div>
