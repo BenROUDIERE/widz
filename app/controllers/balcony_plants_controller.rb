@@ -24,6 +24,27 @@ class BalconyPlantsController < ApplicationController
 
     redirect_to @balcony # == redirect_to balcony_path(@balcony)
   end
+
+  def plant
+    @balcony_plant         = current_user.balcony_plants.find(params[:id])
+    @balcony_plant.planted = true
+    @balcony_plant.save
+    @end_period            = Date.today + 15.days
+    @plant_watering        = @balcony_plant.plant.water_frequency_in_days.days
+    @start_watering        = Date.today + @plant_watering
+    
+    @water_dates = []
+    @water_dates << @start_watering
+
+    until @water_dates.last >= @end_period
+      @water_dates << @water_dates.last + @plant_watering
+    end
+
+    @water_dates.each do |date|
+      Task.create!(due_date: date, category: "arrosage" , message: "pensez à arroser votre plante" , title: "Arrosage" , balcony_plant: @balcony_plant)
+    end
+    redirect_to balcony_path(@balcony_plant.balcony)
+  end
   
   private
 

@@ -1,5 +1,5 @@
 
-<div class="weather">
+<%# <div class="weather">
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
       <div class="card mt-4 mb-5">
@@ -17,4 +17,43 @@
       </div>
     </div>
   </div>
-</div>
+</div> %>
+
+<div class="weather">
+  <div class="card">
+    <h2><%= balcony.city %></h2>
+    <h3>Nuageux<span>Vent 10km/h <span class="dot">•</span> Pluie 0%</span></h3>
+    <h2>23°</h2>
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="cloud">
+            <div class="circle-small"></div>
+            <div class="circle-tall"></div>
+            <div class="circle-medium"></div>
+        </div>
+    </div>
+    <table>
+      <tr>
+        <td>LUN</td>
+        <td>MAR</td>
+        <td>MER</td>
+        <td>JEU</td>
+        <td>VEN</td>
+      </tr>
+      <tr>
+        <td>30°</td>
+        <td>34°</td>
+        <td>36°</td>
+        <td>34°</td>
+        <td>37°</td>
+      </tr>
+      <tr>
+        <td>17°</td>
+        <td>22°</td>
+        <td>19°</td>
+        <td>23°</td>
+        <td>19°</td>
+      </tr>
+    </table>
+  </div>
+</div> 

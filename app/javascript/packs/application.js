@@ -25,6 +25,8 @@ import { initAutocomplete} from '../plugins/init_autocomplete';
 import { initSwiper } from '../plugins/init_swiper';
 import { loadDynamicHomeText } from '../components/home';
 import { slider } from '../components/slider';
+import { checkedPlant } from '../components/checkedPlant';
+import { weather} from '../components/weather';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -36,6 +38,8 @@ document.addEventListener('turbolinks:load', () => {
   initSwiper();
   loadDynamicHomeText();
   slider();
+  checkedPlant();
+  weather();
 });
 
 import "controllers"
