@@ -29,7 +29,7 @@ class BalconyPlantsController < ApplicationController
     @balcony_plant         = current_user.balcony_plants.find(params[:id])
     @balcony_plant.planted = true
     @balcony_plant.save
-    @end_period            = Date.today + 2.months
+    @end_period            = Date.today + 15.days
     @plant_watering        = @balcony_plant.plant.water_frequency_in_days.days
     @start_watering        = Date.today + @plant_watering
     

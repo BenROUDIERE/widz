@@ -1,9 +1,8 @@
 
-
- <div class="cards-container mb-5">
-    <div class="cards">
-      <% @tasks_per_day.each do |due_date, tasks|  %>
-      <%= due_date %>
+<div class="cards-container mb-5">
+  <div class="cards">
+    <% @tasks_per_day.each do |due_date, tasks|  %>
+      <h5>Le <%= l(due_date, format: :long) %></h5>
       <% tasks.each do |task| %>
         <div class="card_tasks">
           <div class="card <%= task.category %> card-plant mb-3" style="max-width: 540px;">

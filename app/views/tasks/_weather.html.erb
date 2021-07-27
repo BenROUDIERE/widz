@@ -20,29 +20,40 @@
 </div> %>
 
 <div class="weather">
-  <div class='wrapper'>
-  <search>
-    <form>
-      <input class='searchbar transparent' id='search' type='text' placeholder='enter city, country' />
-      <input class='button transparent' id='button' type="submit" value='GO' />
-    </form>
-  </search>
-
-  <div class='panel'>
-    <h2 class='city' id='city'></h2>
-    <div class='weather' id='weather'>
-      <div class='group secondary'>
-        <h3 id='dt'></h3>
-        <h3 id='description'></h3>
-      </div>
-      <div class='group secondary'>
-        <h3 id='wind'></h3>
-        <h3 id='humidity'></h3>
-      </div>
-      <div class='temperature' id='temperature'>
-        <h1 class='temp' id='temp'><i id='condition'></i> <span id='num'></span><a class='fahrenheit active' id='fahrenheit' href="#">&deg;F</a><span class='divider secondary'>|</span><a class='celsius' id='celsius' href="#">&deg;C</a></h1>
-      </div>
-      <div class='forecast' id='forecast'></div>
+  <div class="card">
+    <h2><%= balcony.city %></h2>
+    <h3>Nuageux<span>Vent 10km/h <span class="dot">•</span> Pluie 0%</span></h3>
+    <h2>23°</h2>
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="cloud">
+            <div class="circle-small"></div>
+            <div class="circle-tall"></div>
+            <div class="circle-medium"></div>
+        </div>
     </div>
+    <table>
+      <tr>
+        <td>LUN</td>
+        <td>MAR</td>
+        <td>MER</td>
+        <td>JEU</td>
+        <td>VEN</td>
+      </tr>
+      <tr>
+        <td>30°</td>
+        <td>34°</td>
+        <td>36°</td>
+        <td>34°</td>
+        <td>37°</td>
+      </tr>
+      <tr>
+        <td>17°</td>
+        <td>22°</td>
+        <td>19°</td>
+        <td>23°</td>
+        <td>19°</td>
+      </tr>
+    </table>
   </div>
- </div> 
+</div> 
