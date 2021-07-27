@@ -1,7 +1,7 @@
 class Plant < ApplicationRecord
   has_many :balcony_plants, dependent: :destroy
   has_one_attached :photo
-  has_many :tasks, through: :balcony_plants, source: :task
+
   LUMINOSITIES = ['ombre', 'peu ensoleillé', 'ensoleillé']
   CATEGORIES = ['comestible', 'vivace', 'fruits', 'arbuste']
   

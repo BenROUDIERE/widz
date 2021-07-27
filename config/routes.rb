@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   end
 
   resources :balcony_plants, only: [:show] do
+    member do
+      patch :plant # action de planter, verbe et non le nom de la plante
+    end
+
     resources :tasks, only: [:new, :create]
   end
 

@@ -25,6 +25,7 @@ class TasksController < ApplicationController
     else
       @tasks = Task.all
     end
+    @tasks_per_day = @tasks.order('due_date ASC').group_by(&:due_date)
   end
 
   private

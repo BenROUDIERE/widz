@@ -1,8 +1,8 @@
 class Balcony < ApplicationRecord
   belongs_to :user
   has_many :balcony_plants, dependent: :destroy
-  has_many :plants, through: :balcony_plants, source: :plant
-  has_many :tasks, through: :balcony_plants, source: :task
+  has_many :plants, through: :balcony_plants
+  has_many :tasks, through: :balcony_plants
 
   geocoded_by :city
   after_validation :geocode, if: :will_save_change_to_city?
