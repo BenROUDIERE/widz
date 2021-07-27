@@ -20,6 +20,7 @@ class TasksController < ApplicationController
   end
 
   def index
+    @balcony = current_user.balcony
     if params[:query].present?
       @tasks = Task.global_search(params[:query])
     else

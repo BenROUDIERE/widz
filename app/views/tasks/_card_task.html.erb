@@ -1,7 +1,7 @@
 <div class="cards-container mb-5">
   <div class="cards">
     <% @tasks_per_day.each do |due_date, tasks|  %>
-      <%= due_date %>
+      <h5>Le <%= l(due_date, format: :long) %></h5>
       <% tasks.each do |task| %>
         <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
           <div class="row">
