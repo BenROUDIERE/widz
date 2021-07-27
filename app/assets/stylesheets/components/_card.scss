@@ -10,62 +10,8 @@
 /* CARD 1 */
 .card-plant {
   height: auto;
-}
-
-.comestible {
-  border: 1px solid $blue !important;
-
-  .card-subtitle {
-    color: $blue;
-  }
-
-  .btn-warning {
-    background-color: $blue !important;
-    border-color:$blue !important;
-    color: white;
-  }
-}
-.vivace {
-  border: 1px solid $green !important;
-
-  .card-subtitle {
-    color: $green;
-  }
-
-  .btn-warning {
-    background-color: $green !important;
-    border-color:$green !important;
-    color: white;
-  }
-}
-.fruits {
-  border: 1px solid $orange !important;
-
-  .card-subtitle {
-    color: $orange;
-  }
-
-  .btn-warning {
-    background-color: $orange !important;
-    border-color:$orange !important;
-    color: white;
-  }
-}
-.arbuste {
-  border: 1px solid $yellow !important;
-
-  .card-subtitle {
-    color: $yellow;
-  }
-
-  .btn-warning {
-    background-color: $yellow !important;
-    border-color:$yellow !important;
-    color: white;
-  }
-}
-
-.card-plant {
+  border: 2px solid transparent;
+  
   .card-desc {
     padding-right: 0;
   }
@@ -87,11 +33,11 @@
       -webkit-box-orient: vertical;
     }
   }
+
   .btn-warning {
-    background-color: $yellow;
-    border-color:$yellow;
     color: white;
   }
+
   .card-subtitle {
     text-transform: uppercase;
     font-size: 10px;
@@ -101,7 +47,6 @@
     position: unset;
 
     .fas {
-      color: $yellow;
       background: white;
       border-radius: 50%;
       position: absolute;
@@ -135,7 +80,6 @@
     }
 
     .plant:checked+label i:before {
-      color: $green;
       content: "\f00c";
     }
 
@@ -165,6 +109,117 @@
   }
 }
 
+.comestible {
+  &.checked {
+    border: 2px solid $blue;
+  }
+
+  .card-subtitle {
+    color: $blue;
+  }
+
+  .btn-warning {
+    background-color: $blue;
+    border-color:$blue;
+    color: white;
+  }
+
+  .fas {
+      color: $blue;
+  }
+
+  .fas:before {
+    content: "\f067";
+  }
+
+  .plant:checked+label i:before {
+    color: $blue;
+  }
+}
+
+.vivace {
+  &.checked {
+    border: 2px solid $green;
+  }
+
+  .card-subtitle {
+    color: $green;
+  }
+
+  .btn-warning {
+    background-color: $green;
+    border-color:$green;
+    color: white;
+  }
+
+  .fas {
+    color: $green;
+  }
+
+  .fas:before {
+    content: "\f067";
+  }
+
+  .plant:checked+label i:before {
+    color: $green;
+  }
+}
+
+.fruits {
+  &.checked {
+    border: 2px solid $orange;
+  }
+
+  .card-subtitle {
+    color: $orange;
+  }
+
+  .btn-warning {
+    background-color: $orange;
+    border-color:$orange;
+    color: white;
+  }
+
+  .fas {
+    color: $orange;
+  }
+
+  .fas:before {
+    content: "\f067";
+  }
+
+  .plant:checked+label i:before {
+    color: $orange;
+  }
+}
+
+.arbuste {
+  &.checked {
+    border: 2px solid $yellow;
+  }
+
+  .card-subtitle {
+    color: $yellow;
+  }
+
+  .btn-warning {
+    background-color: $yellow;
+    border-color:$yellow;
+    color: white;
+  }
+
+  .fas {
+    color: $yellow;
+  }
+
+  .fas:before {
+    content: "\f067";
+  }
+
+  .plant:checked+label i:before {
+    color: $yellow;
+  }
+}
 
 /* CARD 2 */
 .grid-plants {
