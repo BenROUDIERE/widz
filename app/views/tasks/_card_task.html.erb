@@ -1,22 +1,31 @@
-<div class="cards-container mb-5">
-  <div class="cards">
-    <% @tasks_per_day.each do |due_date, tasks|  %>
+
+
+ <div class="cards-container mb-5">
+    <div class="cards">
+      <% @tasks_per_day.each do |due_date, tasks|  %>
       <%= due_date %>
       <% tasks.each do |task| %>
-        <div class="card aromatique card-plant mb-3" style="max-width: 540px;">
-          <div class="row">
-            <div class="card-body">
-              <div class="plant-img">
-                <%= cl_image_tag(task.plant.photo.key)%>
+        <div class="card_tasks">
+          <div class="card <%= task.category %> card-plant mb-3" style="max-width: 540px;">
+            <div class="row">
+              <div class="col-6 card-desc">
+                <div class="card-body">
+                  <p class="card-subtitle"><%= task.plant.name %></p>
+                  
+                  <h5 class="card-title"><%= task.title %></h5>
+                  <p class="card-subtitle"><strong><%= task.message %></strong></p>
+                </div>
               </div>
-              <h6 class="card-title">Tâche a effectuer : <%= task.title %></h6>
-              <p class="card-subtitle"><%= task.plant.name %></p>
-              <p class="card-subtitle"><%= task.message %></p>
+                <div class="plant-img col-6">
+                <%= cl_image_tag(task.plant.photo.key)%>
+                </div>
             </div>
           </div>
         </div>
       <% end %>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
-              
+
+  
+    
