@@ -34,7 +34,7 @@
         <% if @plant.water_need == "peu"%>
           <i class="bi bi-droplet"></i>
           <p><strong><%= @plant.water_frequency_in_days%>J</strong></p>
-        <% elsif @plant.luminosity == "moyen" %>
+        <% elsif @plant.water_need == "moyen" %>
           <i class="bi bi-droplet-half"></i>
           <p><strong><%= @plant.water_frequency_in_days%>J</strong></p>
         <% else %>
