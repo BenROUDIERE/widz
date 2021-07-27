@@ -20,11 +20,13 @@ class TasksController < ApplicationController
   end
 
   def index
+    @balcony = current_user.balcony
     if params[:query].present?
       @tasks = Task.global_search(params[:query])
     else
       @tasks = Task.all
     end
+    @tasks_per_day = @tasks.order('due_date ASC').group_by(&:due_date)
   end
 
   private

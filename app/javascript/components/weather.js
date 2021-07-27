@@ -29,3 +29,8 @@
 //   event.preventDefault();
 //   fetchWeather(input.value);
 // });
+const weather = () => {
+
+}
+
+export { weather };

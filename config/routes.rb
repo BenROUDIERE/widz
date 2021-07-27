@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+get '/404', to: 'errors#not_found'
+get '/500', to: 'errors#internal_server'
+get '/422', to: 'errors#unprocessable'
+
   # catalogue
   resources :plants, only: [:index, :show]
   
@@ -15,6 +19,10 @@ Rails.application.routes.draw do
   end
 
   resources :balcony_plants, only: [:show] do
+    member do
+      patch :plant # action de planter, verbe et non le nom de la plante
+    end
+
     resources :tasks, only: [:new, :create]
   end
 

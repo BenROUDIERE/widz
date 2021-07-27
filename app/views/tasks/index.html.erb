@@ -1,7 +1,12 @@
 <div class="container p-3" id="container-with-navbar">
   <div class="title">
+  
+  <% if @tasks.present? %>
+    <h4>Tâches a effectuer sur vos plantes</h4>
+    <%= render "weather", balcony: @balcony %>
+    <%= render "card_task" %>
+  <% else %>
     <h4>Vous n'avez pas encore de tâche en cours</h4>
-      <%= render "weather" %>
-      <%= render "card_task" %>
+  <% end %>
   </div>
 </div>
