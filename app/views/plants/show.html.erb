@@ -1,7 +1,11 @@
 <div class="container plant-container">
   <div class="row" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);">
     <div class="title">
-      <h3>Ma plante</h3>
+      <% if current_user.balcony && !@plant_is_already_on_balcony %>
+        <h3>La plante</h3>
+      <% else %>
+        <h3>Ma plante</h3>
+      <% end %>
       <h4 id="index-title"><%= @plant.name %></h4>
     </div>
   </div>
