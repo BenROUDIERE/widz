@@ -1,27 +1,37 @@
 .plant-container {
     margin-bottom: 4rem;
     padding-bottom: 3rem;
-    
 
-    .row img {
+    .row {
         width: 100vw;
         background-size: cover;
-        height: 200px;
-        object-fit: cover;
+        height: 15rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+        .title {
+            color: white;
+            margin: 0 15px;
+            width: 100vw;
+
+            h4 {
+                text-align: center;
+                padding-top: 5rem;
+            }
+        }
     }
 
     #plant_show_button {
-        margin-top: 10px;
-        margin-bottom: 1px;
+        margin: 1rem 0;
         display: flex;
         justify-content: flex-end;
-        background-color: $yellow;
-        border-color: $yellow;
+        background-color: $green;
+        border-color: $green;
     }
 
     .btn-add-plant {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
     }
     
     .logo_water_lum {
@@ -38,13 +48,13 @@
     }
 
     .bi {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .bi-brightness-high-fill,
     .bi-cloud-sun-fill,
     .bi-clouds-fill {
-        font-size: 3.5rem;
+        font-size: 4rem;
         color: $yellow;
     }
     .bi-thermometer-half {
@@ -56,5 +66,25 @@
     .bi-droplet-fill {
         color: $blue;
         text-align: center;
+    }
+
+    .temp-info {
+        text-align: center;
+        font-size: .9rem;
+        margin-bottom: 2rem;
+    }
+
+    .text-justify {
+        border-radius: 5px;
+        color: $blue;
+
+        h6 {
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom:0;
+            color: $blue-50;
+        }
     }
 }

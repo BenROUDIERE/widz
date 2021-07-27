@@ -1,8 +1,12 @@
 <div class="container plant-container">
-  <div class="row">
+  <div class="row" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@plant.photo.key, crop: :fill) %>);">
     <div class="title">
-      <h3 id="index-title"><%= @plant.name %></h3>
-      <%= cl_image_tag(@plant.photo.key, crop: :fill) %>
+      <% if current_user.balcony && !@plant_is_already_on_balcony %>
+        <h3>La plante</h3>
+      <% else %>
+        <h3>Ma plante</h3>
+      <% end %>
+      <h4 id="index-title"><%= @plant.name %></h4>
     </div>
   </div>
   <div class="card-product" id="plant_card">
@@ -27,27 +31,23 @@
 
       <div class="plant-temp">
         <i class="bi bi-thermometer-half"></i>
-        <p><strong><%= @plant.min_temp %> / <%= @plant.max_temp %>°C</strong></p>
       </div>
 
       <div class="plant_water_text">
         <% if @plant.water_need == "peu"%>
           <i class="bi bi-droplet"></i>
-          <p><strong><%= @plant.water_frequency_in_days%>J</strong></p>
         <% elsif @plant.water_need == "moyen" %>
           <i class="bi bi-droplet-half"></i>
-          <p><strong><%= @plant.water_frequency_in_days%>J</strong></p>
         <% else %>
           <i class="bi bi-droplet-fill"></i>
-          <p><strong><%= @plant.water_frequency_in_days%>J</strong></p>
         <% end %>
       </div>
-
     </div>
-    <br>
+    <p class="temp-info"><strong><%= @plant.min_temp %> / <%= @plant.max_temp %>°C</strong></p>
     
     <div class="card-product-infos">
-      <div class="border border-dark p-3 mb-1 text-justify">       
+      <div class="border border-dark p-3 mb-1 text-justify">
+        <h6>Conseils</h6>
         <p>
           Les mois de <% @plant.plantation_months.each do |i| %>
             <strong><%= i %></strong>,
@@ -62,17 +62,15 @@
         </p>
         <p>Pensez à protéger votre plante lorsque la température sera en dessous de <strong><%= @plant.min_temp %>°C</strong> et au dessus de <strong><%= @plant.max_temp %>°C.</strong></p>
         <p>Respectez un espacement de <strong><%= @plant.spacing_in_cm %>cm</strong> avec les autres plantes.</p>
-        
         <p>Exposition: <strong><%= @plant.luminosity %></strong></p>
-        
         <p><strong>Besoin en eau <%= @plant.water_need %>.</strong></p>
-        
         <p>Votre <%=@plant.name%> est à arroser tous les <strong><%= @plant.water_frequency_in_days%></strong> jours.</p>
       </div>
-      <p class="mt-1 mb-20 text-justify p-2">
+      <div class="mt-1 mb-20 text-justify p-2">
         <br>
+        <h6>Description</h6>
         <%= @plant.description %>
-      </p>
+      </div>
     </div>    
   </div>
 </div>
