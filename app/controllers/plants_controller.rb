@@ -6,7 +6,7 @@ class PlantsController < ApplicationController
     if params[:query].present?
       @plants = Plant.global_search(params[:query])
     else
-      @plants = Plant.all
+      @plants = Plant.all.order('name ASC')
     end
   end
   
