@@ -14,7 +14,8 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
     @balcony_plant = BalconyPlant.new(plant_id: @plant.id)
     @plant_is_already_on_balcony = BalconyPlant.where(plant: @plant, balcony: current_user.balcony).exists?
-    # @task = Task.new
+    # @task = Task.find()
+    # @task_done = Task.joins(:plant).where(plant: @plant, balcony: current_user.balcony)
   end
 
   private
