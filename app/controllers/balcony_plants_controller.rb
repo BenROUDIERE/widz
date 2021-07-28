@@ -41,7 +41,7 @@ class BalconyPlantsController < ApplicationController
     end
 
     @water_dates.each do |date|
-      Task.create!(due_date: date, category: "arrosage" , message: "pensez à arroser votre plante" , title: "Arrosage" , balcony_plant: @balcony_plant)
+      Task.create!(due_date: date, category: "arrosage" , message: "Un peu d'eau me ferait du bien !" , title: "Arrosage" , balcony_plant: @balcony_plant)
     end
     redirect_to balcony_path(@balcony_plant.balcony)
   end

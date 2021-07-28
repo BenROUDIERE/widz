@@ -10,11 +10,10 @@
               <div class="col-6 card-desc">
                 <div class="card-body">
                   <p class="card-subtitle"><%= task.plant.name %></p>
-                  <i class="fas fa-faucet"></i>
                   <div>
-                    <% if task.plant.category == "arrosage"%>
+                    <% if task.category == "arrosage"%>
                       <i class="fas fa-faucet"></i>
-                    <% else task.plant.category == "abriter" %>
+                    <% else task.category == "abriter" %>
                       <i class="fas fa-umbrella"></i>
                     <% end %>
                   </div>
