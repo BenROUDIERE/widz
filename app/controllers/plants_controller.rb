@@ -18,7 +18,7 @@ class PlantsController < ApplicationController
     @last_done_tasks = current_user.balcony.tasks.
       joins(:balcony_plant).
       where(balcony_plants: { plant: @plant }, completed: true).
-      where(Task.arel_table[:updated_at].lt(Date.today - 2.weeks)).
+      where(Task.arel_table[:updated_at].gt(Date.today - 2.weeks)).
       order(updated_at: :desc).
       limit(3)
   end
