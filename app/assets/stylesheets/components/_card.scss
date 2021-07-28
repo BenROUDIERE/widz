@@ -374,11 +374,11 @@
   width: 5rem !important;
   border-radius: 50% !important;
   height: 5rem !important;
-  color: white !important;
-}
 
-.not_planted .btn-plant {
-  background: $green;
+  .fas:before {
+    content: "\f4d8";
+    color: white;
+  }
 }
 
 .not_planted .bi-brightness-high-fill,
@@ -386,6 +386,7 @@
 .not_planted .bi-clouds-fill {
   color: gray;
 }
+
 .not_planted .bi-thermometer-half {
   color: gray;
 }
@@ -408,8 +409,17 @@
   }
 
   .btn-success {
-    background: $blue;
+    background: white;
     border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $blue;
+    }
   }
 }
 
@@ -421,8 +431,17 @@
   }
 
   .btn-success {
-    background: $green;
+    background: white;
     border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $green;
+    }
   }
 }
 
@@ -434,8 +453,17 @@
   }
 
   .btn-success {
-    background: $orange;
+    background: white;
     border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $orange;
+    }
   }
 }
 
@@ -447,8 +475,17 @@
   }
 
   .btn-success {
-    background: $yellow;
+    background: white;
     border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $yellow;
+    }
   }
 }
 
