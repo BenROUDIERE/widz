@@ -1,5 +1,5 @@
 
-<div class="card not_planted <%= balcony_plant.plant.category %> card-plant-min mb-3" style="width: 18rem;">
+<div class="card not_planted <%= balcony_plant.plant.category %> card-plant-min" style="width: 18rem;">
     <%= content_tag :span, "", class:"plant-img"%>
     <div class="plant-img card-img-top" style="background-image: url(<%= cl_image_path(balcony_plant.plant.photo.key) %>);">
         <%= simple_form_for @balcony, url: plant_balcony_plant_path(balcony_plant), method: :patch do |f| %>
