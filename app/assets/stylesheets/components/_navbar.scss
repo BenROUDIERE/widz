@@ -14,7 +14,18 @@
       }
     }
   }
-
+  .icon.pastille {
+    color: white;
+    background: red;
+    border-radius: 50%;
+    height: 1.3rem;
+    width: 1.3rem;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    top: 0.3rem;
+    left: 7.3rem;
+  }
   .nav-link {
     width: 5rem;
     display: grid;
