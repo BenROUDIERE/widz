@@ -14,8 +14,13 @@ class PlantsController < ApplicationController
     @plant = Plant.find(params[:id])
     @balcony_plant = BalconyPlant.new(plant_id: @plant.id)
     @plant_is_already_on_balcony = BalconyPlant.where(plant: @plant, balcony: current_user.balcony).exists?
-    # @task = Task.find()
-    # @task_done = Task.joins(:plant).where(plant: @plant, balcony: current_user.balcony)
+
+    @last_done_tasks = current_user.balcony.tasks.
+      joins(:balcony_plant).
+      where(balcony_plants: { plant: @plant }, completed: true).
+      where(Task.arel_table[:updated_at].lt(Date.today - 2.weeks)).
+      order(updated_at: :desc).
+      limit(3)
   end
 
   private
