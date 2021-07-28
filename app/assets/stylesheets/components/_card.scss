@@ -118,6 +118,12 @@
     background-color: $blue;
     border-color:$blue;
     color: white;
+
+    &:active {
+      background-color: $blue !important;
+      border-color: $blue !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -146,6 +152,12 @@
     background-color: $green;
     border-color:$green;
     color: white;
+
+    &:active {
+      background-color: $green !important;
+      border-color: $green !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -174,6 +186,12 @@
     background-color: $orange;
     border-color:$orange;
     color: white;
+
+    &:active {
+      background-color: $orange !important;
+      border-color: $orange !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -202,6 +220,12 @@
     background-color: $yellow;
     border-color:$yellow;
     color: white;
+
+    &:active {
+      background-color: $yellow !important;
+      border-color: $yellow !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -244,6 +268,7 @@
     height: 170px;
     width: 100%;
     object-fit: cover;
+    background-size: cover;
   }
 
   .card-body {
@@ -280,10 +305,14 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
-
 }
 
-.comestible {
+.link-plant:hover {
+  text-decoration: none;
+}
+
+// PLANTED
+.planted.comestible {
   border: 2px solid $blue;
 
   .plant-title {
@@ -296,7 +325,7 @@
   }
 }
 
-.vivace {
+.planted.vivace {
   border: 2px solid $green;
 
   .plant-title {
@@ -309,7 +338,7 @@
   }
 }
 
-.fruits {
+.planted.fruits {
   border: 2px solid $orange;
 
   .plant-title {
@@ -322,11 +351,99 @@
   }
 }
 
-.arbuste {
+.planted.arbuste {
   border: 2px solid $yellow;
 
   .plant-title {
     color: $yellow;
+  }
+
+  .btn-success {
+    background: $yellow;
+    border: none;
+  }
+}
+
+// NOT PLANTED
+.not_planted .card-img-top {
+  display: grid;
+  place-content: center;
+}
+
+.not_planted .btn-plant {
+  width: 5rem !important;
+  border-radius: 50% !important;
+  height: 5rem !important;
+  color: white !important;
+}
+
+.not_planted .btn-plant {
+  background: $green;
+}
+
+.not_planted .bi-brightness-high-fill,
+.not_planted .bi-cloud-sun-fill,
+.not_planted .bi-clouds-fill {
+  color: gray;
+}
+.not_planted .bi-thermometer-half {
+  color: gray;
+}
+
+.not_planted .bi-droplet,
+.not_planted .bi-droplet-half,
+.not_planted .bi-droplet-fill {
+  color: gray;
+}
+
+.not_planted .temp-info {
+  color: gray;
+}
+
+.not_planted.comestible {
+  border: none;
+
+  .plant-title {
+    color: gray;
+  }
+
+  .btn-success {
+    background: $blue;
+    border: none;
+  }
+}
+
+.not_planted.vivace {
+  border: none;
+
+  .plant-title {
+    color: gray; 
+  }
+
+  .btn-success {
+    background: $green;
+    border: none;
+  }
+}
+
+.not_planted.fruits {
+  border: none;
+
+  .plant-title {
+    color: gray;
+  }
+
+  .btn-success {
+    background: $orange;
+    border: none;
+  }
+}
+
+.not_planted.arbuste {
+  border: none;
+
+  .plant-title {
+    color: gray;
   }
 
   .btn-success {
