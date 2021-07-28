@@ -1,0 +1,58 @@
+// INDEX PLANTS PAGE
+.index-container {
+  .comestible {
+    border: 2px solid $blue;
+
+    .card-subtitle {
+      color: $blue;
+    }
+
+    .btn-warning {
+      background-color: $blue;
+      border-color:$blue;
+      color: white;
+    }
+  }
+
+  .vivace {
+    border: 2px solid $green;
+
+    .card-subtitle {
+      color: $green;
+    }
+
+    .btn-warning {
+      background-color: $green;
+      border-color:$green;
+      color: white;
+    }
+  }
+
+  .fruits {
+    border: 2px solid $orange;
+
+    .card-subtitle {
+      color: $orange;
+    }
+
+    .btn-warning {
+      background-color: $orange;
+      border-color:$orange;
+      color: white;
+    }
+  }
+
+  .arbuste {
+    border: 2px solid $yellow;
+
+    .card-subtitle {
+      color: $yellow;
+    }
+
+    .btn-warning {
+      background-color: $yellow;
+      border-color:$yellow;
+      color: white;
+    }
+  }
+}
