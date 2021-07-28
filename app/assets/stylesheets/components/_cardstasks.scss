@@ -19,7 +19,8 @@
             justify-content: space-around;
         }
 
-        .tag-selector .fas {
+        .tag-selector .fas,
+        .tag-selector .far {
             font-size: 1.5rem;
         }
 
@@ -54,6 +55,8 @@
             background-size: cover;
             border-top-right-radius: .2rem;
             border-bottom-right-radius: .2rem;
+            display: grid;
+            place-content: center;
 
             .icon {
                 border-radius: 50%;
