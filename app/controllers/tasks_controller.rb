@@ -26,7 +26,15 @@ class TasksController < ApplicationController
     else
       @tasks = Task.all
     end
-    @tasks_per_day = @tasks.order('due_date ASC').group_by(&:due_date)
+    @tasks_per_day = @tasks.where("due_date >= ?", Date.today).order(due_date: :asc).
+      or(Task.where("due_date < ?", Date.today).where(completed: false)).group_by(&:due_date)
+  end
+
+  def complete
+    @task = Task.find(params[:id])
+    @task.completed = true
+    @task.save
+    redirect_to tasks_path
   end
 
   private
