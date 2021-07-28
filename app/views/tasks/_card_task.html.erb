@@ -20,8 +20,7 @@
                   <p class="card-subtitle"><%= task.message %></p>
                 </div>
               </div>
-              <div class="plant-img">
-                <%= cl_image_tag(task.plant.photo.key)%>
+              <div class="plant-img" style="background-image: url(<%= cl_image_path(task.plant.photo.key)%>);">
                 <% if task.completed? %>
                   <div class="tag-selector bg-warning">
                     <i class="far fa-thumbs-up icon bg-success"></i>
