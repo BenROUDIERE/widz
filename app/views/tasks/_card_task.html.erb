@@ -22,16 +22,20 @@
               </div>
               <div class="plant-img" style="background-image: url(<%= cl_image_path(task.plant.photo.key)%>);">
                 <% if task.completed? %>
-                  <div class="tag-selector bg-warning">
+                  <div class="tag-selector">
                     <i class="far fa-thumbs-up icon bg-success"></i>
                   </div>
                 <% elsif due_date.past? %>
                   <%= link_to complete_task_path(task), method: :patch, class: "tag-selector" do %>
-                    <i class="fas fa-exclamation-triangle icon bg-danger text-white"></i>
+                    <div class="tag-selector">
+                      <i class="fas fa-exclamation-triangle icon bg-danger text-white"></i>
+                    </div>
                   <% end %>
                 <% elsif due_date.today? || due_date.tomorrow? %>
                   <%= link_to complete_task_path(task), method: :patch, class: "tag-selector" do %>
-                    <i class="fas fa-hourglass-half icon custom-fas bg-warning text-white"></i>
+                    <div class="tag-selector bg-warning">
+                      <i class="fas fa-hourglass-half icon custom-fas bg-warning text-white"></i>
+                    </div>
                   <% end %>
                 <% end %>
               </div>
