@@ -72,16 +72,18 @@
         <%= @plant.description %>
       </div>
       <div>
-      <div class="mt-1 mb-20 text-justify p-2"">
-        <h6>Derniéres tâches rèalisèes</h6>
-        <%# <% if @task_done.exist? %>
-          <%# <% @task_done.each do |task| %> %>
-            <%# <p><%= task.category le <%= task.due_date </p> %> %> %>
-          <%# <% end %>  %>
-        <%# <% else %>  %>
-          <p>Vous n'avez rien fait sur votre plante depuis un moment...</p> %>
-        <%# <% end %>     %>
-      </div>
+      <% if @plant_is_already_on_balcony %>
+        <div class="mt-1 mb-20 text-justify p-2"">
+          <h6>Derniéres tâches rèalisèes</h6>
+          <% if @last_done_tasks.present? %>
+            <% @last_done_tasks.each do |task| %>
+              <p><%= task.category %> le <%= task.due_date  %></p>
+            <% end %>
+          <% else %> 
+            <p>Vous n'avez rien fait sur votre plante depuis un moment...</p>
+          <% end %>    
+        </div>
+      <% end %>
     </div>    
   </div>
 </div>
