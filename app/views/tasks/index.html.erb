@@ -4,6 +4,13 @@
   <% if @tasks.present? %>
     <h4>Tâches a effectuer sur vos plantes</h4>
     <%= render "weather", balcony: @balcony %>
+    <div class="mb-3">
+      <% if @today_number_of_tasks == nil %>
+        <h5> Nombre de tâches en cours aujourd'hui : aucune</h5>
+      <% else %>
+        <h5>Nombre de tâches en cours aujourd'hui : <%= @today_number_of_tasks %></h5>
+      <% end %>
+    </div>
     <%= render "card_task" %>
   <% else %>
     <h4>Vous n'avez pas encore de tâche en cours</h4>
