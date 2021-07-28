@@ -8,39 +8,10 @@
 
 <div class="grid-plants mb-5">
   <% @balcony_plants.each do |balcony_plant| %>
-    <div class="card <%= balcony_plant.plant.category %> card-plant-min mb-3" style="width: 18rem;">
-      <%= link_to plant_path(balcony_plant.plant) do %>
-        <%= content_tag :span, "", class:"plant-img"%>
-        <%= cl_image_tag(balcony_plant.plant.photo.key, class: "card-img-top") %>
-      <% end %>
-      <%= simple_form_for @balcony, url: plant_balcony_plant_path(balcony_plant), method: :patch do |f| %>
-        <%= f.submit "Planter", class: "btn btn-success", id: "btn-add-planter" %>
-        <h5 class="plant-title card-title"><%= balcony_plant.plant.name %></h5>
-       <% end %>
-      <div class="logo_water_lum">
-        <div>
-          <% if balcony_plant.plant.luminosity == "ombre"%>
-            <i class="bi bi-clouds-fill"></i>
-          <% elsif balcony_plant.plant.luminosity == "peu ensoleillé" %>
-            <i class="bi bi-cloud-sun-fill"></i>
-          <% else %>
-            <i class="bi bi-brightness-high-fill"></i>
-          <% end %>
-        </div>
-        <div class="plant-temp">
-          <i class="bi bi-thermometer-half"></i>
-        </div>
-        <div>
-          <% if balcony_plant.plant.water_need == "peu"%>
-            <i class="bi bi-droplet"></i>
-          <% elsif balcony_plant.plant.water_need == "moyen" %>
-            <i class="bi bi-droplet-half"></i>
-          <% else %>
-            <i class="bi bi-droplet-fill"></i>
-          <% end %>
-        </div>
-      </div>
-      <p class="temp-info"><strong><%= balcony_plant.plant.min_temp %> / <%= balcony_plant.plant.max_temp %>°C</strong></p>
-    </div>
+    <% if balcony_plant.planted? %>
+      <%= render "planted_plant", balcony_plant: balcony_plant %>
+    <% else %>
+      <%= render "not_planted_plant", balcony_plant: balcony_plant%>
+    <% end %>
   <% end %>
 </div>
