@@ -46,7 +46,7 @@
   .plant-img {
     position: unset;
 
-    .fas {
+    .custom-fas {
       background: white;
       border-radius: 50%;
       position: absolute;
@@ -57,10 +57,6 @@
       height: 36px;
       display: grid;
       place-content: center;
-    }
-
-    .fas:before {
-      content: "\f067";
     }
 
     #add-new-plant-suggestion {

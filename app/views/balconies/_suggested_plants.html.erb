@@ -26,7 +26,7 @@
               <label for="plant-<%= plant.id %>"
                 as: :check_boxes, input_html: { class: "tag-selector" }, 
                 item_wrapper_class= 'tag-item'>
-                <i class="fas fa-plus"></i>
+                <i class="fas fa-plus custom-fas"></i>
               </label>
             </div>
           </div>
@@ -41,7 +41,7 @@
             <p class="card-text">Ajouter une nouvelle plante parmis toutes celles disponibles</p>
             <div class="add-plant-img">
               <%= link_to plants_path do %>
-                <i class="fas fa-plus" id="add-new-plant-suggestion"></i>
+                <i class="fas fa-plus custom-fas" id="add-new-plant-suggestion"></i>
               <% end %>
             </div>
           </div>
