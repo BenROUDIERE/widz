@@ -1,9 +1,4 @@
 .card_tasks {
-    .card-body {
-        flex: 1 1 auto;
-        min-height: 1px;
-        padding: 0.5rem;
-    }
     .arrosage {
         background-color: $blue-50;
         color: white;
@@ -19,14 +14,51 @@
     .card {
         height: 90px;
         margin: 0;
-    }
-    .plant-img {
-        height: 88px;
-        img {
-            padding: 0;
-            margin: 0;
+
+        .card-body {
+            width: 15rem;
         }
-        
-    }
+
+        .fas {
+            font-size: 1.4rem;
+        }
     
+        .task-card-info {
+            display: flex;
+            justify-content: space-between;
+
+            .card-desc {
+                .card-body {
+                    flex: 1 1 auto;
+                    min-height: 1px;
+                    padding: 0.5rem;
+                    #plant-name {
+                        font-size: 14px;
+                    }
+                    p {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+
+        .plant-img {
+            .icon {
+                border-radius: 50%;
+                position: absolute;
+                top: 1.2rem;
+                right: 1.5rem;
+                padding: .75rem;
+                width: 50px;
+                height: 50px;
+                display: grid;
+                place-content: center;
+            }
+            height: 88px;
+            img {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
 }

@@ -6,10 +6,10 @@
       <% tasks.each do |task| %>
         <div class="card_tasks">
           <div class="card <%= task.category %> card-plant mb-3" style="max-width: 540px;">
-            <div class="row">
-              <div class="col-6 card-desc">
+            <div class="task-card-info">
+              <div class="card-desc">
                 <div class="card-body">
-                  <p class="card-subtitle"><%= task.plant.name %></p>
+                  <p class="card-subtitle" id="plant-name"><%= task.plant.name %></p>
                   <div>
                     <% if task.category == "arrosage"%>
                       <i class="fas fa-faucet"></i>
@@ -17,19 +17,29 @@
                       <i class="fas fa-umbrella"></i>
                     <% end %>
                   </div>
-                  <p class="card-subtitle"><strong><%= task.message %></strong></p>
+                  <p class="card-subtitle"><%= task.message %></p>
                 </div>
               </div>
-                <div class="plant-img col-6">
+              <div class="plant-img">
                 <%= cl_image_tag(task.plant.photo.key)%>
-                </div>
+                <% if task.completed? %>
+                  <div class="tag-selector bg-warning">
+                    <i class="far fa-thumbs-up icon bg-success"></i>
+                  </div>
+                <% elsif due_date.past? %>
+                  <%= link_to complete_task_path(task), method: :patch, class: "tag-selector" do %>
+                    <i class="fas fa-exclamation-triangle icon bg-danger text-white"></i>
+                  <% end %>
+                <% elsif due_date.today? || due_date.tomorrow? %>
+                  <%= link_to complete_task_path(task), method: :patch, class: "tag-selector" do %>
+                    <i class="fas fa-hourglass-half icon custom-fas bg-warning text-white"></i>
+                  <% end %>
+                <% end %>
+              </div>
             </div>
           </div>
         </div>
       <% end %>
-      <% end %>
-    </div>
+    <% end %>
   </div>
-
-  
-    
+</div>

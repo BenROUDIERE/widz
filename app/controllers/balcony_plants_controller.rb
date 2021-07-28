@@ -31,7 +31,7 @@ class BalconyPlantsController < ApplicationController
     @balcony_plant.save
     @end_period            = Date.today + 15.days
     @plant_watering        = @balcony_plant.plant.water_frequency_in_days.days
-    @start_watering        = Date.today + @plant_watering
+    @start_watering        = Date.today
     
     @water_dates = []
     @water_dates << @start_watering
