@@ -7,7 +7,7 @@
   }
 }
 
-/* CARD 1 */
+/* CARD PLANT 1 */
 .card-plant {
   height: auto;
   border: 2px solid transparent;
@@ -217,7 +217,7 @@
   }
 }
 
-/* CARD 2 */
+/* SMALL CARD PLANT */
 .grid-plants {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -226,54 +226,117 @@
   place-items: center;
 }
 
+.temp-info {
+  text-align: center;
+  font-size: .9rem;
+  margin-bottom: .6rem;
+}
+
 .card-plant-min {
   height: auto;
   width: 160px !important;
+
+  h5 {
+    font-size: 1rem;
+  }
+  
+  .card-img-top {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .fas {
+    font-size: x-large;
+  }
+
+  .fa-thermometer-three-quarters {
+    color: green;
+  }
+
+  .fa-sun {
+    color: $yellow;
+  }
+
+  .fa-tint {
+    color: blue;
+  }
+
+  .plant-img {
+    position: relative;
+  }
+
+  .plant-title {
+    left: 0;
+    padding: .6rem;
+    padding-bottom: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
 }
 
-.card-plant-min .card-img-top {
-  height: 170px;
-  width: 100%;
-  object-fit: cover;
+.comestible {
+  border: 2px solid $blue;
+
+  .plant-title {
+    color: $blue;
+  }
+
+  .btn-success {
+    background: $blue;
+    border: none;
+  }
 }
 
-.card-plant-min .card-body {
-  display: flex;
-  justify-content: space-around;
+.vivace {
+  border: 2px solid $green;
+
+  .plant-title {
+    color: $green; 
+  }
+
+  .btn-success {
+    background: $green;
+    border: none;
+  }
 }
 
-.card-plant-min .fas {
-  font-size: x-large;
+.fruits {
+  border: 2px solid $orange;
+
+  .plant-title {
+    color: $orange;
+  }
+
+  .btn-success {
+    background: $orange;
+    border: none;
+  }
 }
 
-.card-plant-min .fa-thermometer-three-quarters {
-  color: green;
+.arbuste {
+  border: 2px solid $yellow;
+
+  .plant-title {
+    color: $yellow;
+  }
+
+  .btn-success {
+    background: $yellow;
+    border: none;
+  }
 }
 
-.card-plant-min .fa-sun {
-  color: $yellow;
-}
 
-.card-plant-min .fa-tint {
-  color: blue;
-}
-
-.card-plant-min .plant-img {
-  position: relative;
-}
-
-.card-plant-min .plant-title {
-  left: 0;
-  padding: .6rem 0 0 .6rem;
-}
-
-/* CARD 3 */
-// .plant-img {
-//   background: #000000;
-//   background: -webkit-linear-gradient(bottom left, #000000, #FFFFFF);
-//   background: -moz-linear-gradient(bottom left, #000000, #FFFFFF);
-//   background: linear-gradient(to top right, #000000, #FFFFFF);
-// }
+/* CARD PROFILE */
 .card-params {
   width: 200px !important;
   display: grid !important;
@@ -296,6 +359,7 @@
   text-align: center;
   margin-bottom: 2.5rem;
 }
+
 .logo_water_lum {
   display: flex;
   justify-content: space-around;
@@ -328,7 +392,7 @@
   color: $blue;
 }
 
-/* CARD 4 */
+/* CARD TASKS */
 .card-notif {
   display: flex !important;
   flex-direction: row !important;
@@ -386,13 +450,4 @@
     display: grid;
     place-content: center;
   }
-}
-
-#btn-add-plant {
-  width: 100%;
-}
-
-#btn-add-planter {
-  width: 100%;
-  border-radius: 0px;
 }
