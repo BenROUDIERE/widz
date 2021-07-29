@@ -3,9 +3,20 @@
   <% @balcony_plants.each do |p| %>
   <% total_space += p.plant.spacing_in_cm %>
   <% end %>
+  <% if @balcony_plants.where(planted: true).count >= 1 %>
+    <p>Tu as <strong><%= @balcony_plants.where(planted: true).count %></strong> plantes sur ton balcon</p>
+    <% if @balcony_plants.count -  @balcony_plants.where(planted: true).count > 0 %>
+    <p>Dont <strong><%= @balcony_plants.count -  @balcony_plants.where(planted: true).count%></strong> en attente de mise en terre</p>
+    <% end %>
+  <% else %>
+    <p>Tu n'as encore aucune plante mise en terre, valide chaque plante pour commencer son suivi</p>
+  <% end %>
   <h6>Remarques</h6>
-  <p>Ces <%= @balcony_plants.count %> plantes demandent <%= total_space %>cm linéaires minimum pour leur bonne implantation.<br>Pensez à consulter les fiches des plantes pour connaitre leur espacement au pieds.</p>
-  <p>Attention au géranium qui ne supporte pas de trop grosses variations de températures</p>
+  <div class="card p-2">
+  <i><p>Ces <strong><%= @balcony_plants.count %></strong> plantes demandent <strong><%= total_space %>cm</strong> linéaires minimum pour leur bonne implantation. 
+  <br>L'espacement nécessaire entre elles est indiqué dans le détail de chacune des plantes.</p>
+  <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
+  </div>
 </div>
 
 <div class="grid-plants mb-5">
