@@ -27,6 +27,12 @@ before_action :set_balcony, only: [:show]
     @suggested_plants = Plant.limit(current_user.balcony.number_of_plants_desired)
   end
 
+  def weather
+    @balcony = current_user.balcony
+    @client = OpenWeather::Client.new(api_key: "02ec45d4d324b506bf92f98205cbef06")
+    @data = @client.current_weather(city: balcony.city, units: "metric", lang: "fr")
+    @forecast = @client.one_call(lat: @balcony.latitude, lon: balcony.longitude)
+  end
 
   private
 
