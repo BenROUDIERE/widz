@@ -25,21 +25,22 @@ class TasksController < ApplicationController
   def index
     @balcony = current_user.balcony
     check_weather
-
-    if 
-      params[:query].present?
-    else
-      @tasks = Task.includes(plant: { photo_attachment: :blob })
-    end
+    @tasks = @balcony.tasks
     @tasks_per_day = @tasks.where("due_date >= ?", Date.today).order(due_date: :asc).
-      or(Task.where("due_date < ?", Date.today).where(completed: false)).group_by(&:due_date)
+      or(@tasks.where("due_date < ?", Date.today).where(completed: false)).group_by(&:due_date)
+
   end
 
   def complete
     @task = Task.find(params[:id])
     @task.completed = true
     @task.save
-    redirect_to tasks_path
+    
+    respond_to do |f|
+      f.text do 
+        render(partial: "tasks/task_card_stimulus" , locals: { task: @task, due_date: @task.due_date }, formats: [:html])
+      end
+    end
   end
 
  

@@ -43,7 +43,8 @@ class BalconyPlantsController < ApplicationController
     @water_dates.each do |date|
       Task.create!(due_date: date, category: "arrosage" , message: "Un peu d'eau me ferait du bien !" , title: "Arrosage" , balcony_plant: @balcony_plant)
     end
-    redirect_to balcony_path(@balcony_plant.balcony)
+    # redirect_to balcony_path(@balcony_plant.balcony)
+    render partial: "balconies/planted_plant", locals: { balcony_plant: @balcony_plant }
   end
   
   private
