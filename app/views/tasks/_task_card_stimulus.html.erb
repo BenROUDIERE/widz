@@ -1,0 +1,51 @@
+
+<div data-controller="plant" class="card_tasks">
+  <div class="card <%= task.category %> card-plant mb-3" style="max-width: 540px;">
+    <div class="task-card-info">
+      <div class="card-desc">
+        <div class="card-body">
+          <p class="card-subtitle" id="plant-name"><%= task.plant.name %></p>
+          <div>
+            <% if task.category == "arrosage"%>
+              <i class="fas fa-faucet"></i>
+            <% else task.category == "abriter" %>
+              <i class="fas fa-umbrella"></i>
+            <% end %>
+          </div>
+          <p class="card-subtitle"><%= task.message %></p>
+        </div>
+      </div>
+      <div class="plant-img" style="background-image: url(<%= cl_image_path(task.plant.photo.key)%>);">
+        <% if task.completed? %>
+          <div class="tag-selector" id="tag-task">
+            <i class="far fa-thumbs-up icon bg-success"></i>
+          </div>
+        <% elsif due_date.past? %>
+          <%= link_to complete_task_path(task), method: :patch, 
+                                                remote: true,
+                                                class: "tag-selector", 
+                                                data: { 
+                                                  action: "ajax:success->plant#replaceCard",
+                                                  type: "text"
+                                                } do %>
+            <div class="tag-selector" id="tag-task">
+              <i class="fas fa-exclamation-triangle icon bg-danger text-white"></i>
+            </div>
+          <% end %>
+        <% elsif due_date.today? || due_date.tomorrow? %>
+          <%= link_to complete_task_path(task), method: :patch, 
+                                                class: "tag-selector", 
+                                                remote: true, 
+                                                data: { 
+                                                  action: "ajax:success->plant#replaceCard",
+                                                  type: "text"
+                                                } do %>
+            <div class="tag-selector bg-warning" id="tag-task">
+              <i class="fas fa-hourglass-half icon custom-fas bg-warning text-white"></i>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

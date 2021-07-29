@@ -6,9 +6,9 @@
     <%= render "weather", balcony: @balcony %>
     <div class="mb-3">
       <% if today_number_of_tasks == nil %>
-        <h5> Nombre de tâches en cours aujourd'hui : aucune</h5>
+        <h5> Aucune tâches en cours aujourd'hui</h5>
       <% else %>
-        <h5>Nombre de tâches en cours aujourd'hui : <%= today_number_of_tasks %></h5>
+        <h5><strong><%= today_number_of_tasks %></strong> tâches en cours aujourd'hui</h5>
       <% end %>
     </div>
     <%= render "card_task" %>
