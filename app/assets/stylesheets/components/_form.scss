@@ -23,8 +23,12 @@
 
   .title {
     padding: 10px;
-    margin-bottom: 30px;
     color: $blue;
+    margin-bottom: 2rem;
+  }
+
+  .tips {
+    color: gray
   }
 
   .border-orange {
@@ -59,8 +63,12 @@
   }
 
   .col-form-label {
-    margin-bottom: 25px;
-}
+    margin-bottom: 2rem;
+  }
+
+  .finishhim {
+    margin-bottom: 2rem;
+  }
 
   .form-check-label {
     width: 100px;
@@ -70,11 +78,13 @@
     grid-template-columns: 1fr 1fr ;
 
     label {
-      margin: 1rem;
+      margin-bottom: 1rem;
       display: grid;
       place-content: center;
     }
+
   }
+
   .category-wrapper {
     display: flex;
     align-items: center;
