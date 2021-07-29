@@ -24,12 +24,10 @@ class TasksController < ApplicationController
 
   def index
     @balcony = current_user.balcony
+    check_weather
     @tasks = @balcony.tasks
     @tasks_per_day = @tasks.where("due_date >= ?", Date.today).order(due_date: :asc).
       or(@tasks.where("due_date < ?", Date.today).where(completed: false)).group_by(&:due_date)
-    
-    check_weather   
-    # binding.pry # continue to resume
 
   end
 
@@ -53,6 +51,15 @@ class TasksController < ApplicationController
     @client = OpenWeather::Client.new(api_key: "02ec45d4d324b506bf92f98205cbef06")
     @data = @client.current_weather(city: @balcony.city, units: 'metric', lang: 'fr')
     # @forecast = @client.one_call(lat: @balcony.latitude, lon: @balcony.longitude)
+    @maximum_temp = @data.main.temp_max.to_i
+    @minimum_temp = @data.main.temp_min.to_i
+    balcony_plant_to_care_about = current_user.balcony_plants.joins(:plant).
+      where("plants.max_temp < ? OR plants.min_temp > ?", @maximum_temp, @minimum_temp)
+    
+
+    balcony_plant_to_care_about.each do |balcony_plant|
+      Task.find_or_create_by!(due_date: Date.today, category: "abriter" , message: "Alerte température, abritez votre plante!" , title: "Abriter" , balcony_plant: balcony_plant)
+    end
   end
 
   # def set_task
