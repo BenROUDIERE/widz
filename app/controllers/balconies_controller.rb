@@ -24,7 +24,7 @@ before_action :set_balcony, only: [:show]
   def show 
     @balcony          = Balcony.find(params[:id])
     @balcony_plants   = current_user.balcony_plants
-    @suggested_plants = Plant.limit(5)
+    @suggested_plants = Plant.limit(current_user.balcony.number_of_plants_desired)
   end
 
   def weather

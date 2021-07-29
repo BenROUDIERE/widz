@@ -3,7 +3,7 @@
 </div>
 <div class="remarks">
   <h6>Remarques sur vos plantes</h6>
-  <p>Votre géranium a besion d'eau et ne doit pas être planté à côté d'un cactus</p>
+  <p>Attention au géranium qui ne supporte pas de trop grosses variations de températures</p>
 </div>
 <div class="cards-container">
   <%= simple_form_for @balcony, url: batch_create_balcony_balcony_plants_path(@balcony), method: :post do |f| %>
@@ -14,7 +14,6 @@
             <div class="col-6 card-desc">
               <div class="card-body">
                 <p class="card-subtitle"><%= plant.category %></p>
-                
                 <h5 class="card-title"><%= plant.name %></h5>
                 <p class="card-text"><%= plant.description %></p>
                 <%= link_to 'Details', plant_path(plant), class:"btn btn-warning" %>

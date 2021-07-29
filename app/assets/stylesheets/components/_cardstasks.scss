@@ -12,15 +12,21 @@
     }
     
     .card {
-        height: 90px;
         margin: 0;
+        border-radius: .5rem !important;
 
         .card-body {
-            width: 15rem;
+            width: 16rem;
+            justify-content: space-around;
+        }
+
+        .tag-selector .fas,
+        .tag-selector .far {
+            font-size: 1.5rem;
         }
 
         .fas {
-            font-size: 1.4rem;
+            font-size: 1.8rem;
         }
     
         .task-card-info {
@@ -32,8 +38,10 @@
                     flex: 1 1 auto;
                     min-height: 1px;
                     padding: 0.5rem;
+
                     #plant-name {
-                        font-size: 14px;
+                        font-size: 1rem;
+                        font-weight: bolder;
                     }
                     p {
                         font-size: 11px;
@@ -43,21 +51,21 @@
         }
 
         .plant-img {
+            height: 6rem;
+            width: 6rem;
+            background-size: cover;
+            border-top-right-radius: .4rem;
+            border-bottom-right-radius: .4rem;
+            display: grid;
+            place-content: center;
+
             .icon {
                 border-radius: 50%;
-                position: absolute;
-                top: 1.2rem;
-                right: 1.5rem;
                 padding: .75rem;
                 width: 50px;
                 height: 50px;
                 display: grid;
                 place-content: center;
-            }
-            height: 88px;
-            img {
-                padding: 0;
-                margin: 0;
             }
         }
     }

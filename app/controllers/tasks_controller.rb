@@ -24,8 +24,8 @@ class TasksController < ApplicationController
 
   def index
     @balcony = current_user.balcony
-    if params[:query].present?
-      @tasks = Task.global_search(params[:query])
+    if 
+      params[:query].present?
     else
       @tasks = Task.includes(plant: { photo_attachment: :blob })
     end

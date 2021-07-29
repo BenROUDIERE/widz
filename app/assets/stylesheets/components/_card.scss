@@ -1,13 +1,17 @@
 .cards {
   display: grid;
   place-content: center;
-  
+
+  .card {
+    border-radius: .5rem;
+  }
+
   h1 {
     text-align: center;
   }
 }
 
-/* CARD 1 */
+/* CARD PLANT 1 */
 .card-plant {
   height: auto;
   border: 2px solid transparent;
@@ -15,6 +19,7 @@
   .card-desc {
     padding-right: 0;
   }
+
   .card-body {
     height: 100%;
     display: flex !important;
@@ -118,6 +123,12 @@
     background-color: $blue;
     border-color:$blue;
     color: white;
+
+    &:active {
+      background-color: $blue !important;
+      border-color: $blue !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -146,6 +157,12 @@
     background-color: $green;
     border-color:$green;
     color: white;
+
+    &:active {
+      background-color: $green !important;
+      border-color: $green !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -174,6 +191,12 @@
     background-color: $orange;
     border-color:$orange;
     color: white;
+
+    &:active {
+      background-color: $orange !important;
+      border-color: $orange !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -202,6 +225,12 @@
     background-color: $yellow;
     border-color:$yellow;
     color: white;
+
+    &:active {
+      background-color: $yellow !important;
+      border-color: $yellow !important;
+      color: white !important;
+    }
   }
 
   .fas {
@@ -217,63 +246,267 @@
   }
 }
 
-/* CARD 2 */
+/* SMALL CARD PLANT */
 .grid-plants {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   grid-gap: 1.75rem;
   place-items: center;
+
+  .card {
+    border-radius: .5rem;
+  }
+}
+
+.temp-info {
+  text-align: center;
+  font-size: .9rem;
+  margin-bottom: .6rem;
 }
 
 .card-plant-min {
   height: auto;
   width: 160px !important;
+
+  h5 {
+    font-size: 1rem;
+  }
+  
+  .card-img-top {
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+  }
+
+  .card-body {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .fas {
+    font-size: x-large;
+  }
+
+  .fa-thermometer-three-quarters {
+    color: green;
+  }
+
+  .fa-sun {
+    color: $yellow;
+  }
+
+  .fa-tint {
+    color: blue;
+  }
+
+  .plant-img {
+    position: relative;
+  }
+
+  .plant-title {
+    left: 0;
+    padding: .6rem;
+    padding-bottom: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
 }
 
-.card-plant-min .card-img-top {
-  height: 170px;
-  width: 100%;
-  object-fit: cover;
+.link-plant:hover {
+  text-decoration: none;
 }
 
-.card-plant-min .card-body {
-  display: flex;
-  justify-content: space-around;
+// PLANTED
+.planted .card-img-top {
+  border-top-right-radius: .4rem;
+  border-top-left-radius: .4rem;
 }
 
-.card-plant-min .fas {
-  font-size: x-large;
+.planted.comestible {
+  border: 2px solid $blue;
+
+  .plant-title {
+    color: $blue;
+  }
+
+  .btn-success {
+    background: $blue;
+    border: none;
+  }
 }
 
-.card-plant-min .fa-thermometer-three-quarters {
-  color: green;
+.planted.vivace {
+  border: 2px solid $green;
+
+  .plant-title {
+    color: $green; 
+  }
+
+  .btn-success {
+    background: $green;
+    border: none;
+  }
 }
 
-.card-plant-min .fa-sun {
-  color: $yellow;
+.planted.fruits {
+  border: 2px solid $orange;
+
+  .plant-title {
+    color: $orange;
+  }
+
+  .btn-success {
+    background: $orange;
+    border: none;
+  }
 }
 
-.card-plant-min .fa-tint {
-  color: blue;
+.planted.arbuste {
+  border: 2px solid $yellow;
+
+  .plant-title {
+    color: $yellow;
+  }
+
+  .btn-success {
+    background: $yellow;
+    border: none;
+  }
 }
 
-.card-plant-min .plant-img {
-  position: relative;
+// NOT PLANTED
+.not_planted .card-img-top {
+  display: grid;
+  place-content: center;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
 }
 
-.card-plant-min .plant-title {
-  left: 0;
-  padding: .6rem 0 0 .6rem;
+.not_planted .btn-plant {
+  width: 5rem !important;
+  border-radius: 50% !important;
+  height: 5rem !important;
+
+  .fas:before {
+    content: "\f4d8";
+    color: white;
+  }
 }
 
-/* CARD 3 */
-// .plant-img {
-//   background: #000000;
-//   background: -webkit-linear-gradient(bottom left, #000000, #FFFFFF);
-//   background: -moz-linear-gradient(bottom left, #000000, #FFFFFF);
-//   background: linear-gradient(to top right, #000000, #FFFFFF);
-// }
+.not_planted .bi-brightness-high-fill,
+.not_planted .bi-cloud-sun-fill,
+.not_planted .bi-clouds-fill {
+  color: gray;
+}
+
+.not_planted .bi-thermometer-half {
+  color: gray;
+}
+
+.not_planted .bi-droplet,
+.not_planted .bi-droplet-half,
+.not_planted .bi-droplet-fill {
+  color: gray;
+}
+
+.not_planted .temp-info {
+  color: gray;
+}
+
+.not_planted.comestible {
+  border: none;
+
+  .plant-title {
+    color: gray;
+  }
+
+  .btn-success {
+    background: white;
+    border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $blue;
+    }
+  }
+}
+
+.not_planted.vivace {
+  border: none;
+
+  .plant-title {
+    color: gray; 
+  }
+
+  .btn-success {
+    background: white;
+    border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $green;
+    }
+  }
+}
+
+.not_planted.fruits {
+  border: none;
+
+  .plant-title {
+    color: gray;
+  }
+
+  .btn-success {
+    background: white;
+    border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $orange;
+    }
+  }
+}
+
+.not_planted.arbuste {
+  border: none;
+
+  .plant-title {
+    color: gray;
+  }
+
+  .btn-success {
+    background: white;
+    border: none;
+
+    &:active {
+      background: white;
+      border: none;
+    }
+
+    .fas:before {
+      color: $yellow;
+    }
+  }
+}
+
+
+/* CARD PROFILE */
 .card-params {
   width: 200px !important;
   display: grid !important;
@@ -296,6 +529,7 @@
   text-align: center;
   margin-bottom: 2.5rem;
 }
+
 .logo_water_lum {
   display: flex;
   justify-content: space-around;
@@ -328,7 +562,7 @@
   color: $blue;
 }
 
-/* CARD 4 */
+/* CARD TASKS */
 .card-notif {
   display: flex !important;
   flex-direction: row !important;
@@ -386,13 +620,4 @@
     display: grid;
     place-content: center;
   }
-}
-
-#btn-add-plant {
-  width: 100%;
-}
-
-#btn-add-planter {
-  width: 100%;
-  border-radius: 0px;
 }

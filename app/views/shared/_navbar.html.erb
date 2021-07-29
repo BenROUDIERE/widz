@@ -1,13 +1,18 @@
 <div class=" navbar-custom fixed-bottom">
   <div class="nav-icon">
-    <div class="nav-link nav-home <%= "active" if current_user.balcony && current_page?(balcony_path(current_user.balcony)) %>">
-      <% if current_user.balcony %>
+    <div class="nav-link nav-home <%= "active" if current_user&.balcony && current_page?(balcony_path(current_user.balcony)) %>">
+      <% if current_user&.balcony %>
         <%= link_to balcony_path(current_user.balcony) do %>
           <%= content_tag :span, "", :class => "fas fa-seedling" %>
         <% end %>
       <% end %>
     </div>
     <div class="nav-link nav-notif <%= "active" if current_page?(tasks_path) %>">
+      <% if today_number_of_tasks > 0%>
+        <div class="icon pastille"> 
+          <%= today_number_of_tasks %>
+        </div>
+      <% end %>
       <%= link_to tasks_path do %>
         <%= content_tag :span, "", :class => "fas fa-bell" %>
       <% end %>
