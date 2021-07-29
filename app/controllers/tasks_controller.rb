@@ -58,7 +58,7 @@ class TasksController < ApplicationController
     
 
     balcony_plant_to_care_about.each do |balcony_plant|
-      Task.find_or_create_by!(due_date: Date.today, category: "abriter" , message: "Alerte température, abritez votre plante!" , title: "Abriter" , balcony_plant: balcony_plant)
+      Task.find_or_create_by!(due_date: Date.today, category: "abriter" , message: "Alerte température, abritez votre plante! maximum #{balcony_plant.plant.min_temp}°C à #{balcony_plant.plant.max_temp}°C  " , title: "Abriter" , balcony_plant: balcony_plant)
     end
   end
 
