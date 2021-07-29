@@ -74,10 +74,31 @@
       <div>
       <% if @plant_is_already_on_balcony %>
         <div class="mt-1 mb-20 text-justify p-2"">
-          <h6>Derniéres tâches rèalisèes</h6>
+          <h6>Derniers soins rèalisès</h6>
           <% if @last_done_tasks.present? %>
             <% @last_done_tasks.each do |task| %>
-              <p><%= task.category %> le <%= task.due_date  %></p>
+              <div class="card_tasks">
+                <div class="card <%= task.category %> card-plant mb-3" style="max-width: 540px;">
+                  <div class="task-card-info" id="task-historic">
+                    <div class="card-desc">
+                      <div class="card-body">
+                        <div>
+                          <% if task.category == "arrosage"%>
+                            <i class="fas fa-faucet"></i>
+                          <% else task.category == "abriter" %>
+                            <i class="fas fa-temperature-high"></i>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                      <% if task.category == "abriter" %>
+                        <p class="task-action text-white"><strong>Plante abritée le <%= l(task.due_date, format: :short) %></strong></p>
+                      <% else task.category == "arrosage"%>
+                        <p class="task-action text-white"><strong>Arrosage effectué le <%= l(task.due_date, format: :short) %></strong></p>
+                      <% end %>
+                  </div>
+                </div>
+              </div>
             <% end %>
           <% else %> 
             <p>Vous n'avez rien fait sur votre plante depuis un moment...</p>

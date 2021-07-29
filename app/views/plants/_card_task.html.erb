@@ -1,0 +1,19 @@
+<div data-controller="plant" class="card_tasks">
+  <div class="card <%= task.category %> card-plant mb-3" style="max-width: 540px;">
+    <div class="task-card-info">
+      <div class="card-desc">
+        <div class="card-body">
+          <p class="card-subtitle" id="plant-name"><%= @task.plant.name %></p>
+          <div>
+            <% if @task.category == "arrosage"%>
+              <i class="fas fa-faucet"></i>
+            <% else @task.category == "abriter" %>
+              <i class="fas fa-temperature-high"></i>
+            <% end %>
+          </div>
+          <p class="card-subtitle"><%= @task.message %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

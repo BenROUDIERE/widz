@@ -1,19 +1,18 @@
 <div class="container p-3" id="container-with-navbar">
   <div class="title">
-  
   <% if @tasks.present? %>
-    <h4>Tâches a effectuer sur vos plantes</h4>
+    <h4>Soins á effectuer sur tes plantes</h4>
     <%= render "weather", balcony: @balcony %>
     <div class="mb-3">
-      <% if today_number_of_tasks == nil %>
-        <h5> Aucune tâches en cours aujourd'hui</h5>
+      <% if today_number_of_tasks == 0 %>
+        <h5> Rien á signaler aujourd'hui... </h5>
       <% else %>
-        <h5><strong><%= today_number_of_tasks %></strong> tâches en cours aujourd'hui</h5>
+        <h5><strong><%= today_number_of_tasks %></strong> soins á réaliser aujourd'hui</h5>
       <% end %>
     </div>
     <%= render "card_task" %>
   <% else %>
-    <h4>Vous n'avez pas encore de tâche en cours</h4>
+    <h4>Tu n'as pas encore de tâche en cours</h4>
   <% end %>
   </div>
 </div>
