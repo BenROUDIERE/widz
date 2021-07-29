@@ -27,6 +27,7 @@ class TasksController < ApplicationController
     @tasks = @balcony.tasks
     @tasks_per_day = @tasks.where("due_date >= ?", Date.today).order(due_date: :asc).
       or(@tasks.where("due_date < ?", Date.today).where(completed: false)).group_by(&:due_date)
+    
     check_weather   
     # binding.pry # continue to resume
 
