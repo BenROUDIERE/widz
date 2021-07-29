@@ -26,6 +26,7 @@
                                                 class: "tag-selector", 
                                                 data: { 
                                                   action: "ajax:success->plant#replaceCard",
+                                                  action: "click->counter#refresh",
                                                   type: "text"
                                                 } do %>
             <div class="tag-selector" id="tag-task">
@@ -38,6 +39,7 @@
                                                 remote: true, 
                                                 data: { 
                                                   action: "ajax:success->plant#replaceCard",
+                                                  action: "click->counter#refresh",
                                                   type: "text"
                                                 } do %>
             <div class="tag-selector bg-warning" id="tag-task">

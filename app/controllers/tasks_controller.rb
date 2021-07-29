@@ -43,10 +43,9 @@ class TasksController < ApplicationController
     end
   end
 
- 
 
   private
-  
+
   def check_weather
     @client = OpenWeather::Client.new(api_key: "02ec45d4d324b506bf92f98205cbef06")
     @data = @client.current_weather(city: @balcony.city, units: 'metric', lang: 'fr')

@@ -10,7 +10,18 @@
         color: white;
         margin: 0;
     }
-    
+    #task-historic{
+        display:grid;
+        grid-template-columns: .5fr 1fr;
+        .task-action {
+            display: grid;
+            place-content: center;
+        }
+        .card-body {
+            width: 6rem;
+            justify-content: space-around;
+        }
+    }
     .card {
         margin: 0;
         border-radius: .5rem !important;
