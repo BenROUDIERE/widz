@@ -17,6 +17,7 @@
                     <i class="fas fa-pen"></i><%= f.input :title, :label => 'Comment veux-tu appeler ton balcon ?', 
                     collection_wrapper_class: 'category-wrapper-name',
                     placeholder: 'Mon Balcowidz' %>
+                    <p class="tips">Pour retrouver plus facilement ton balcon donne lui un petit nom !</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -25,6 +26,7 @@
                     id:"balcony_city", 
                     collection_wrapper_class: 'category-wrapper-location',
                     placeholder: 'Moncuq est accepté...' %>
+                    <p class="tips">Cela nous permet de te proposer des types de pantes qui correspondent à ta région</p>
                   </div>
                 </div>
                 <div class="swiper-slide">
@@ -66,7 +68,7 @@
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="center slidercontainer mt-5"> 
+                  <div class="center"> 
                     <i class="fas fa-list-ol"></i>
                     <%= f.label :number_of_plants_desired, "Combien de plantes souhaites-tu sur ton balcon ?" %> 
                     <%= f.number_field :number_of_plants_desired, 
@@ -78,17 +80,17 @@
                       data_slider_step: "5",
                       data_slider_value: "5",
                       id: "ex8" %>
-                    <%= f.submit 'Valide ton Balcon', class: "btn btn-success mt-5" %>
+                    <%= f.submit 'Valide ton Balcon', class: "btn btn-success finishhim mt-5" %>
                   </div>
                 </div>
               </div>
               <!-- If we need navigation buttons -->
-              <div class="swiper-pagination"></div>
             </div>
           <% end %>
+          <%# <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> %>
         </div>
       </div>
     </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
   </div>
