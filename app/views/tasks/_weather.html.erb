@@ -12,8 +12,8 @@
       </div>
       
       <div class="forecast">
-        <h3>Max <%= @data.main.temp_max.to_i %>°C</h3>
-        <h3>Min <%= @data.main.temp_min.to_i %>°C</h3>
+        <h3>Max <%= @minimum_temp %>°C</h3>
+        <h3>Min <%= @maximum_temp %>°C</h3>
         <h3>Nuages <%= @data.clouds.all %>%</h3>
       </div>
     </div>
