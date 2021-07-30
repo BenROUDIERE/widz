@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Weedz, l'application d'optimistion de végétalisation et de jardinage sur balcons et terrasses.</title>
-    <%= favicon_link_tag "favicon.ico" %>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Weedz, est l'application d'optimisation du jardinage sur balcons et terrasses. Plantes compatibles, alertes de soin des plantes, alertes météo, maintenir des plantes sur un balcon n'a jamais été aussi facile.">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+    <title><%= meta_title %></title>
+      <meta name="description" content="<%= meta_description %>">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Facebook Open Graph data -->
+      <meta property="og:title" content="<%= meta_title %>" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="<%= request.original_url %>" />
+      <meta property="og:image" content="<%= meta_image %>" />
+      <meta property="og:description" content="<%= meta_description %>" />
+      <meta property="og:site_name" content="<%= meta_title %>" />
 
-    <meta property="og:title" content="Weedz - Un jardin sur votre balcon facilement">
-    <meta property="og:image" content="/assets/facebook.png">
-    <meta property="og:description" content="Weedz, est l'application d'optimisation du jardinage sur balcons et terrasses. Plantes compatibles, alertes de soin des plantes, alertes météo, maintenir des plantes sur un balcon n'a jamais été aussi facile.">
-    <meta property="og:site_name" content="widz"/>
-    <meta property="og:see_also" content="http://www.widz.fr/">
+      <!-- Twitter Card data -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="<%= DEFAULT_META["twitter_account"] %>">
+      <meta name="twitter:title" content="<%= meta_title %>">
+      <meta name="twitter:description" content="<%= meta_description %>">
+      <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
+      <meta name="twitter:image:src" content="<%= meta_image %>">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
