@@ -7,9 +7,9 @@
   <% total_space += plant.spacing_in_cm %>
   <% end %>
   <h6>Remarques</h6>
-  <div class="card p-2">
+  <div class="card px-2 py-3">
     <i><p>Ces <strong><%= @suggested_plants.count %></strong> plantes demandent <strong><%= total_space %>cm</strong> linéaires minimum pour leur bonne implantation 
-    <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></i>
+    <p class="mb-0">Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></i>
   </div>
 </div>
 <div class="cards-container">
