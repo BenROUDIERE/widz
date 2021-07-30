@@ -3,19 +3,24 @@
   <% @balcony_plants.each do |p| %>
   <% total_space += p.plant.spacing_in_cm %>
   <% end %>
-  <% if @balcony_plants.where(planted: true).count >= 1 %>
-    <p>Tu as <strong><%= @balcony_plants.where(planted: true).count %></strong> plantes sur ton balcon</p>
-    <% if @balcony_plants.count -  @balcony_plants.where(planted: true).count > 0 %>
-    <p>Dont <strong><%= @balcony_plants.count -  @balcony_plants.where(planted: true).count%></strong> en attente de mise en terre</p>
+  <div>
+    <% if @balcony_plants.where(planted: true).count > 1 %>
+      <p><strong><%= @balcony_plants.where(planted: true).count %></strong> plantes ont été mises en terre
+      <% if @balcony_plants.count -  @balcony_plants.where(planted: true).count > 0 %>
+        <br>Plus que <strong><%= @balcony_plants.count -  @balcony_plants.where(planted: true).count%></strong> à planter</p>
+      <% end %>
+    <% elsif %>
+      <% @balcony_plants.where(planted: true).count == 1  %>
+      <p><strong><%= @balcony_plants.where(planted: true).count %></strong> plante a été mise en terre
+    <% else %>
+      <p>Tu n'as encore aucune plante mise en terre, valide chaque plante pour commencer son suivi</p>
     <% end %>
-  <% else %>
-    <p>Tu n'as encore aucune plante mise en terre, valide chaque plante pour commencer son suivi</p>
-  <% end %>
+  </div>
   <h6>Remarques</h6>
   <div class="card p-2">
   <i><p>Ces <strong><%= @balcony_plants.count %></strong> plantes demandent <strong><%= total_space %>cm</strong> linéaires minimum pour leur bonne implantation. 
-  <br>L'espacement nécessaire entre elles est indiqué dans le détail de chacune des plantes.</p>
   <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
+  <p>Clique sur une plante pour voir toutes ses infos.</p>
   </div>
 </div>
 
