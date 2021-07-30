@@ -4,27 +4,19 @@
   <% total_space += p.plant.spacing_in_cm %>
   <% end %>
   <div>
-    <% if @balcony_plants.where(planted: true).count > 1 %>
-      <p><strong><%= @balcony_plants.where(planted: true).count %></strong> plantes ont été mises en terre
-      <% if @balcony_plants.count -  @balcony_plants.where(planted: true).count > 0 %>
-        <br>Plus que <strong><%= @balcony_plants.count -  @balcony_plants.where(planted: true).count%></strong> à planter</p>
-      <% end %>
-    <% elsif %>
-      <% @balcony_plants.where(planted: true).count == 1  %>
-      <p><strong><%= @balcony_plants.where(planted: true).count %></strong> plante a été mise en terre
-    <% else %>
-      <p>Tu n'as encore aucune plante mise en terre, valide chaque plante pour commencer son suivi</p>
+    <% if @balcony_plants.where(planted: true).count == 0 %>
+      <p class="mb-0">Tu n'as encore aucune plante mise en terre, valide chaque plante pour commencer son suivi</p>
+    <% elsif @balcony_plants.count -  @balcony_plants.where(planted: true).count > 0%>
+      <br>Pour finaliser ton balcon il te reste <strong><%= @balcony_plants.count -  @balcony_plants.where(planted: true).count%></strong> plantes à mettre en terre</p>
     <% end %>
   </div>
-  <h6>Remarques</h6>
-  <div class="card p-2">
+  <h6 class="mt-3">Remarques</h6>
+  <div class="card px-2 py-3">
   <% if @balcony_plants.count -  @balcony_plants.where(planted: true).count > 0 %>
     <i><p>Ces <strong><%= @balcony_plants.count %></strong> plantes demandent <strong><%= total_space %>cm</strong> linéaires minimum pour leur bonne implantation. 
-    <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
-    <p>Clique sur une plante pour voir toutes ses infos.</p>
+    <p class="mb-0">Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
   <% else %>
-    <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
-    <p>Clique sur une plante pour voir toutes ses infos.</p>
+    <p class="mb-0">Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
   <% end %>
   </div>
 </div>

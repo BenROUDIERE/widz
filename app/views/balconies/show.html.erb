@@ -1,6 +1,7 @@
 <div class="container" id="container-with-navbar">
   <div class="title">
     <h3><%= @balcony.title %></h3>
+    <p><strong><%= @balcony_plants.where(planted: true).count %></strong> plantes sur ton balcon</p>
   </div>
 
   <% if @balcony_plants.present? %>
