@@ -53,7 +53,8 @@ class TasksController < ApplicationController
     @maximum_temp = @data.main.temp_max.to_i
     @minimum_temp = @data.main.temp_min.to_i
     balcony_plant_to_care_about = current_user.balcony_plants.joins(:plant).
-      where("plants.max_temp < ? OR plants.min_temp > ?", @maximum_temp, @minimum_temp)
+      where("plants.max_temp < ? OR plants.min_temp > ?", @maximum_temp, @minimum_temp).
+      where(planted: true)
     
 
     balcony_plant_to_care_about.each do |balcony_plant|
