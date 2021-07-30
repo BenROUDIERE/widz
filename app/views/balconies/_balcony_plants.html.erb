@@ -18,9 +18,14 @@
   </div>
   <h6>Remarques</h6>
   <div class="card p-2">
-  <i><p>Ces <strong><%= @balcony_plants.count %></strong> plantes demandent <strong><%= total_space %>cm</strong> linéaires minimum pour leur bonne implantation. 
-  <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
-  <p>Clique sur une plante pour voir toutes ses infos.</p>
+  <% if @balcony_plants.count -  @balcony_plants.where(planted: true).count > 0 %>
+    <i><p>Ces <strong><%= @balcony_plants.count %></strong> plantes demandent <strong><%= total_space %>cm</strong> linéaires minimum pour leur bonne implantation. 
+    <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
+    <p>Clique sur une plante pour voir toutes ses infos.</p>
+  <% else %>
+    <p>Attention au <strong>géranium</strong> qui ne supporte pas de trop grosses variations de températures</p></strong></i>
+    <p>Clique sur une plante pour voir toutes ses infos.</p>
+  <% end %>
   </div>
 </div>
 
