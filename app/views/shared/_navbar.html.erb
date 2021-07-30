@@ -7,9 +7,9 @@
         <% end %>
       <% end %>
     </div>
-    <div data-controller="counter" class="nav-link nav-notif <%= "active" if current_page?(tasks_path) %>">
+    <div class="nav-link nav-notif <%= "active" if current_page?(tasks_path) %>">
       <% if today_number_of_tasks > 0%>
-        <div data-counter-target="count" class="icon pastille"> 
+        <div class="icon pastille"> 
           <%= today_number_of_tasks %>
         </div>
       <% end %>
